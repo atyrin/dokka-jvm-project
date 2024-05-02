@@ -85,8 +85,8 @@ tasks.dokkaHtml.configure {
             outputDirectory.set(layout.buildDirectory.dir(dokka_output_name ?: "dokka"))
             jdkVersion.set(17)
 //            suppress.set(false)
-            suppressInheritedMembers.set(false)
-            suppressObviousFunctions.set(false)
+//            suppressInheritedMembers.set(true)
+//            suppressObviousFunctions.set(true)
 
             includes.from("extra.md")
             samples.from(
