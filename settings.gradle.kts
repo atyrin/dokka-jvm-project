@@ -23,3 +23,5 @@ pluginManagement{
 }
 
 rootProject.name = "dokka-jvm-project"
+
+includeBuild("dokka-test-plugin")

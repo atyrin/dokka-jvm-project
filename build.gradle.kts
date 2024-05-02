@@ -18,12 +18,12 @@ kotlin {
 
 allprojects {
     repositories {
-        mavenLocal()
         mavenCentral()
         maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev")
         maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/test")
         maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
         maven("https://oss.sonatype.org/service/local/repositories/orgjetbrainsdokka-1101/content/")
+        mavenLocal()
     }
 }
 
@@ -32,6 +32,7 @@ buildscript {
         val dokka_version: String by project
         classpath("org.jetbrains.dokka:dokka-base:$dokka_version")
         classpath("org.jetbrains.dokka:versioning-plugin:$dokka_version")
+        classpath("org.jetbrains.qa:dokka-test-plugin")
     }
 }
 
@@ -51,6 +52,7 @@ dependencies {
     val dokka_version: String by project
 //    dokkaHtmlPlugin("com.glureau:html-mermaid-dokka-plugin:0.4.4")
     dokkaHtmlPlugin("org.jetbrains.dokka:versioning-plugin:$dokka_version")
+    dokkaHtmlPlugin("org.jetbrains.qa:dokka-test-plugin")
 //    dokkaHtmlPlugin("org.jetbrains.dokka:javadoc-plugin:$dokka_version")
 //    dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:$dokka_version")
 }

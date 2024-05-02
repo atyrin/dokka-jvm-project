@@ -29,5 +29,6 @@ fun x(`param dd`: String){}
 
 ## Sample for tabs
 @see [org.jetbrains.qa.signatures.overloads.OverloadedClass] comment
+@see [org.jetbrains.qa.signatures.overloads] package
 @see [OverloadedClass] comment
 @sample [org.jetbrains.qa.kdoc.rendering.samples.sampleBase]

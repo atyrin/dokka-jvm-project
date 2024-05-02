@@ -17,6 +17,14 @@ fun sampleBase() {
 fun samplesComplex(): String {
     val a = 1..6
     val sum = a.sum()
+    replaceMe("sdf")
     println(sum)
     return sum.toString()
 }
+
+/**
+ *
+ * See dokka-test-plugin
+ * @suppress
+ */
+fun replaceMe(s: String){}
