@@ -1,0 +1,398 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>org.jetbrains.qa.inheritence</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+        if (storage == null) {
+            const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            if (osDarkSchemePreferred === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        } else {
+            const savedDarkMode = JSON.parse(storage)
+            if(savedDarkMode === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../styles/multimodule.css" rel="Stylesheet">
+<script type="text/javascript" src="../../dokka-mermaid.js" async></script>
+</head>
+<body>
+<div class="root">
+    <nav class="navigation" id="navigation-wrapper">
+        <div class="navigation--inner">
+            <div class="navigation-title">
+                <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+                <div class="library-name">
+                        <a class="library-name--link" href="../../index.html">
+                                Dokka JVM Project
+                        </a>
+                </div>
+                <div class="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;-dokka -j-v-m -project/org.jetbrains.qa.inheritence/index.html&quot;}"><div class="versions-dropdown">
+  <div class="versions-dropdown-button">1.9.0</div>
+  <div class="versions-dropdown-data"><a href="../../../../-dokka -j-v-m -project/org.jetbrains.qa.inheritence/index.html">1.9.20</a><a href="../../../../not-found-version.html?v=1.9.10">1.9.10</a><a href="../../../1.8.20/-dokka -j-v-m -project/org.jetbrains.qa.inheritence/index.html">1.8.20</a><a href="../../../1.8.10/-dokka -j-v-m -project/org.jetbrains.qa.inheritence/index.html">1.8.10</a></div>
+</div>
+</dokka-template-command>                </div>
+                <div>  📝Template customisation is applied</div>
+            </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/main">jvm</button>
+        </div>
+        </div>
+        <div class="navigation-controls">
+            <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+            <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+        </div>
+    </nav>
+    <div id="container">
+        <div class="sidebar" id="leftColumn">
+            <div class="sidebar--inner" id="sideMenu"></div>
+        </div>
+        <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="Dokka JVM Project::org.jetbrains.qa.inheritence////PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../index.html">Dokka JVM Project</a><span class="delimiter">/</span><span class="current">org.jetbrains.qa.inheritence</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-989814715%2FClasslikes%2F769193423" anchor-label="ExtensionParentFirst" id="-989814715%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-extension-parent-first/index.html"><span>Extension</span><wbr><span>Parent</span><wbr><span><span>First</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-989814715%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-extension-parent-first/index.html">ExtensionParentFirst</a> : <a href="-extension-parent-root/index.html">ExtensionParentRoot</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-113207221%2FClasslikes%2F769193423" anchor-label="ExtensionParentRoot" id="-113207221%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-extension-parent-root/index.html"><span>Extension</span><wbr><span>Parent</span><wbr><span><span>Root</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-113207221%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-extension-parent-root/index.html">ExtensionParentRoot</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1086873081%2FClasslikes%2F769193423" anchor-label="ExtensionParentSecond" id="1086873081%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-extension-parent-second/index.html"><span>Extension</span><wbr><span>Parent</span><wbr><span><span>Second</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1086873081%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-extension-parent-second/index.html">ExtensionParentSecond</a> : <a href="-extension-parent-first/index.html">ExtensionParentFirst</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1170979709%2FClasslikes%2F769193423" anchor-label="InheritedFromKotlinJClass" id="-1170979709%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherited-from-kotlin-j-class/index.html"><span>Inherited</span><wbr><span>From</span><wbr><span>Kotlin</span><wbr><span><span>JClass</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1170979709%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherited-from-kotlin-j-class/index.html">InheritedFromKotlinJClass</a> : <a href="-kotlin-class-with-properties/index.html">KotlinClassWithProperties</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-992899546%2FClasslikes%2F769193423" anchor-label="InheritJavaProperties" id="-992899546%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-java-properties/index.html"><span>Inherit</span><wbr><span>Java</span><wbr><span><span>Properties</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-992899546%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherit-java-properties/index.html">InheritJavaProperties</a> : <a href="../org.jetbrains.qa.java.members/-java-class-with-properties/index.html">JavaClassWithProperties</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="225149190%2FClasslikes%2F769193423" anchor-label="InheritJClassWithPublicFullAccessedProps" id="225149190%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-with-public-full-accessed-props/index.html"><span>Inherit</span><wbr><span>JClass</span><wbr><span>With</span><wbr><span>Public</span><wbr><span>Full</span><wbr><span>Accessed</span><wbr><span><span>Props</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="225149190%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherit-j-class-with-public-full-accessed-props/index.html">InheritJClassWithPublicFullAccessedProps</a> : <a href="../org.jetbrains.qa.java.members/-j-class-with-public-full-accessed-props/index.html">JClassWithPublicFullAccessedProps</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-393637834%2FClasslikes%2F769193423" anchor-label="InheritJClassWithPublicReadOnlyProps" id="-393637834%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-with-public-read-only-props/index.html"><span>Inherit</span><wbr><span>JClass</span><wbr><span>With</span><wbr><span>Public</span><wbr><span>Read</span><wbr><span>Only</span><wbr><span><span>Props</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-393637834%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherit-j-class-with-public-read-only-props/index.html">InheritJClassWithPublicReadOnlyProps</a> : <a href="../org.jetbrains.qa.java.members/-j-class-with-public-read-only-props/index.html">JClassWithPublicReadOnlyProps</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1725062371%2FClasslikes%2F769193423" anchor-label="InheritList" id="-1725062371%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-list/index.html"><span>Inherit</span><wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1725062371%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-inherit-list/index.html">InheritList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-inherit-list/index.html">T</a><span class="token operator">&gt;</span> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-inherit-list/index.html">T</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1086810974%2FClasslikes%2F769193423" anchor-label="JavaClassToInherit" id="-1086810974%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-java-class-to-inherit/index.html"><span>Java</span><wbr><span>Class</span><wbr><span>To</span><wbr><span><span>Inherit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1086810974%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-java-class-to-inherit/index.html">JavaClassToInherit</a></div><div class="brief ">Root package Java class</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1968877317%2FClasslikes%2F769193423" anchor-label="KotlinChild" id="-1968877317%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kotlin-child/index.html"><span>Kotlin</span><wbr><span><span>Child</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1968877317%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-kotlin-child/index.html">KotlinChild</a> : <a href="-java-class-to-inherit/index.html">JavaClassToInherit</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1865961722%2FClasslikes%2F769193423" anchor-label="KotlinClassWithProperties" id="-1865961722%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kotlin-class-with-properties/index.html"><span>Kotlin</span><wbr><span>Class</span><wbr><span>With</span><wbr><span><span>Properties</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1865961722%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-kotlin-class-with-properties/index.html">KotlinClassWithProperties</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1514306277%2FClasslikes%2F769193423" anchor-label="KotlinCompanionChild" id="-1514306277%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kotlin-companion-child/index.html"><span>Kotlin</span><wbr><span>Companion</span><wbr><span><span>Child</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1514306277%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-kotlin-companion-child/index.html">KotlinCompanionChild</a></div><div class="brief "><p class="paragraph">Kotlin class where companion inherit Java class</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-312191711%2FClasslikes%2F769193423" anchor-label="KotlinParent" id="-312191711%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kotlin-parent/index.html"><span>Kotlin</span><wbr><span><span>Parent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-312191711%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-kotlin-parent/index.html">KotlinParent</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="640563155%2FClasslikes%2F769193423" anchor-label="KotlinSubclass" id="640563155%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kotlin-subclass/index.html"><span>Kotlin</span><wbr><span><span>Subclass</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="640563155%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-kotlin-subclass/index.html">KotlinSubclass</a> : <a href="-kotlin-superclass/index.html">KotlinSuperclass</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1494962314%2FClasslikes%2F769193423" anchor-label="KotlinSubclassWithNameLongEnough" id="-1494962314%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kotlin-subclass-with-name-long-enough/index.html"><span>Kotlin</span><wbr><span>Subclass</span><wbr><span>With</span><wbr><span>Name</span><wbr><span>Long</span><wbr><span><span>Enough</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1494962314%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-kotlin-subclass-with-name-long-enough/index.html">KotlinSubclassWithNameLongEnough</a> : <a href="-kotlin-superclass/index.html">KotlinSuperclass</a></div><div class="brief "><p class="paragraph">Issue with new line https://github.com/Kotlin/dokka/issues/3090</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="727365140%2FClasslikes%2F769193423" anchor-label="KotlinSubclassWithNameLongEnoughButAnother" id="727365140%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kotlin-subclass-with-name-long-enough-but-another/index.html"><span>Kotlin</span><wbr><span>Subclass</span><wbr><span>With</span><wbr><span>Name</span><wbr><span>Long</span><wbr><span>Enough</span><wbr><span>But</span><wbr><span><span>Another</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="727365140%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-kotlin-subclass-with-name-long-enough-but-another/index.html">KotlinSubclassWithNameLongEnoughButAnother</a> : <a href="-kotlin-superclass/index.html">KotlinSuperclass</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="434127182%2FClasslikes%2F769193423" anchor-label="KotlinSuperclass" id="434127182%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kotlin-superclass/index.html"><span>Kotlin</span><wbr><span><span>Superclass</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="434127182%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-kotlin-superclass/index.html">KotlinSuperclass</a></div><div class="brief "><p class="paragraph">KotlinParentDescr</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1564604785%2FFunctions%2F769193423" anchor-label="extensionForJavaClass" id="-1564604785%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="extension-for-java-class.html"><span>extension</span><wbr><span>For</span><wbr><span>Java</span><wbr><span><span>Class</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1564604785%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-java-class-to-inherit/index.html">JavaClassToInherit</a><span class="token punctuation">.</span><a href="extension-for-java-class.html"><span class="token function">extensionForJavaClass</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Extension function for <a href="-java-class-to-inherit/index.html">JavaClassToInherit</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1301003546%2FFunctions%2F769193423" anchor-label="extensionFun" id="1301003546%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="extension-fun.html"><span>extension</span><wbr><span><span>Fun</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1301003546%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-extension-parent-root/index.html">ExtensionParentRoot</a><span class="token punctuation">.</span><a href="extension-fun.html"><span class="token function">extensionFun</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Extension function for <a href="-extension-parent-root/index.html">ExtensionParentRoot</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-839878528%2FFunctions%2F769193423" anchor-label="use" id="-839878528%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="use.html"><span><span>use</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-839878528%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="use.html"><span class="token function">use</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Stored XSS JVM Only Module</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

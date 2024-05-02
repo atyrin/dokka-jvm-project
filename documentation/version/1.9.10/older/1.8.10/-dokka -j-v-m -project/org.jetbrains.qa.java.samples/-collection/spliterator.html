@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>spliterator</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+        if (storage == null) {
+            const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            if (osDarkSchemePreferred === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        } else {
+            const savedDarkMode = JSON.parse(storage)
+            if(savedDarkMode === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../styles/multimodule.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../dokka-mermaid.js" async></script>
+</head>
+<body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+        <div id="leftToggler"><span class="icon-toggler"></span></div>
+        <div class="library-name">
+                <a href="../../../index.html">
+                        <span>Dokka JVM Project</span>
+                </a>
+        </div>
+        <div>
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;-dokka -j-v-m -project/org.jetbrains.qa.java.samples/-collection/spliterator.html&quot;}"><div class="versions-dropdown">
+  <div class="versions-dropdown-button">1.8.10</div>
+  <div class="versions-dropdown-data"><a href="../../../../../-dokka -j-v-m -project/org.jetbrains.qa.java.samples/-collection/spliterator.html">1.9.10</a><a href="../../../../1.8.20/-dokka -j-v-m -project/org.jetbrains.qa.java.samples/-collection/spliterator.html">1.8.20</a><a href="spliterator.html">1.8.10</a></div>
+</div>
+</dokka-template-command>        </div>
+        <div>  📝Template customisation is applied</div>
+        <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/main">jvm</button>
+        </div>
+            <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+            <div id="searchBar"></div>
+        </div>
+    </div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="member" id="content" pageids="Dokka JVM Project::org.jetbrains.qa.java.samples/Collection/spliterator/#/PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../../index.html">Dokka JVM Project</a><span class="delimiter">/</span><a href="../index.html">org.jetbrains.qa.java.samples</a><span class="delimiter">/</span><a href="index.html">Collection</a><span class="delimiter">/</span><span class="current">spliterator</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>spliterator</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="spliterator.html"><span class="token function">spliterator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html">Spliterator</a><span class="token operator">&lt;</span><a href="index.html">E</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/kotlin/kotlinx.coroutines/tree/master//src/main/java/org/jetbrains/qa/java/samples/Collection.java#L562">source</a>)</span></span></div><p class="paragraph">Creates a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html">Spliterator</a> over the elements in this collection. Implementations should document characteristic values reported by the spliterator. Such characteristic values are not required to be reported if the spliterator reports <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html#SIZED--">SIZED</a> and this collection contains no elements. </p><p class="paragraph">The default implementation should be overridden by subclasses that can return a more efficient spliterator. In order to preserve expected laziness behavior for the <a href="stream.html">stream</a> and <a href="parallel-stream.html">parallelStream</a>} methods, spliterators should either have the characteristic of <code class="lang-kotlin">IMMUTABLE</code> or <code class="lang-kotlin">CONCURRENT</code>, or be <a href="Spliterator.html#binding">late-binding</a>. If none of these is practical, the overriding class should describe the spliterator's documented policy of binding and structural interference, and should override the <a href="stream.html">stream</a> and <a href="parallel-stream.html">parallelStream</a> methods to create streams using a <code class="lang-kotlin">Supplier</code> of the spliterator, as in: </p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">
+    Stream&lt;E&gt; s = StreamSupport.stream(() -&gt; spliterator(), spliteratorCharacteristics)
+</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">These requirements ensure that streams produced by the <a href="stream.html">stream</a> and <a href="parallel-stream.html">parallelStream</a> methods will reflect the contents of the collection as of initiation of the terminal stream operation. __implSpec The default implementation creates a <a href="Spliterator.html#binding">late-binding</a> spliterator from the collections's <code class="lang-kotlin">Iterator</code>. The spliterator inherits the fail-fast properties of the collection's iterator. </p><p class="paragraph"> The created <code class="lang-kotlin">Spliterator</code> reports <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html#SIZED--">SIZED</a>. __implSpec The created <code class="lang-kotlin">Spliterator</code> additionally reports <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html#SUBSIZED--">SUBSIZED</a>. </p><p class="paragraph">If a spliterator covers no elements then the reporting of additional characteristic values, beyond that of <code class="lang-kotlin">SIZED</code> and <code class="lang-kotlin">SUBSIZED</code>, does not aid clients to control, specialize or simplify computation. However, this does enable shared use of an immutable and empty spliterator instance (see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterators.html#emptySpliterator--">emptySpliterator</a>) for empty collections, and enables clients to determine if such a spliterator covers no elements.</p><span class="kdoc-tag"><h4 class="">Return</h4><p class="paragraph">a <code class="lang-kotlin">Spliterator</code> over the elements in this collection</p></span></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Stored XSS JVM Only Module</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+
