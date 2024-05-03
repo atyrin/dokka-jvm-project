@@ -1,4 +1,4 @@
-package org.jetbrains.qa.signatures.arguments
+package org.jetbrains.qa.signatures.arguments.default
 
 /**
  * Class used in the [defValueFunWithCustomClass]
