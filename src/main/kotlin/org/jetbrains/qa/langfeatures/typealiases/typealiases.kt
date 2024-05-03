@@ -1,7 +1,8 @@
-package org.jetbrains.qa.typealiases
+package org.jetbrains.qa.langfeatures.typealiases
 
 open class OpenTAClass
 typealias OpenTA = OpenTAClass
+
 /**
  * typealias with name [TypealiasToClass]
  */
@@ -20,21 +21,25 @@ typealias TypealiasToClass = ClassForUsingInTypeAlias
 
 /**
  * This is a typealias to inner class inside local class [ClassForUsingInTypeAlias.Inner]
+ * Itself: [TypealiasToInnerClass]
  */
 typealias TypealiasToInnerClass = ClassForUsingInTypeAlias.Inner
 
 
 /**
  * Typealias to external class in java stdlib [java.io.BufferedInputStream]
+ * Itself: [TypealiasToExternalClass]
  */
 typealias TypealiasToExternalClass = java.io.BufferedInputStream
 
 /**
  * Typealias to functional type `(Int, String, Any) -> Unit`
+ * Itself: [TypeAliasToFunctionType]
  */
 typealias TypeAliasToFunctionType = (Int, String, Any) -> Unit
 
 /**
  * Typealias to functional type `(T) -> Boolean`
+ * Itself: [TypeAliasToFunctionTypeWithGeneric]
  */
 typealias TypeAliasToFunctionTypeWithGeneric<T> = (T) -> Boolean
