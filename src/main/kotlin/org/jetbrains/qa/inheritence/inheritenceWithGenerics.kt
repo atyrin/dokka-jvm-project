@@ -11,8 +11,8 @@ interface IPerson<Z> {
 }
 
 /**
- * @property age general persons age -- not rendered on the property page
- * @property name general persons name -- not rendered on the property page
+ * @property age general persons age -- not rendered on the property page https://github.com/Kotlin/dokka/issues/2304
+ * @property name general persons name -- not rendered on the property page https://github.com/Kotlin/dokka/issues/2304
  */
 class GeneralPersonImplementation<Z>(
     override val age: Int,
