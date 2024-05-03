@@ -4,6 +4,9 @@ interface RecieverWithNestedExtension{
     val memberProp: String
     fun memberFun()
 
+    /**
+     * Here is a [this] link. It will go to the [String]
+     */
     fun String.externalExtensionToStdLib()
 
     fun RecieverWithNestedExtension.extensionForParent()
@@ -20,8 +23,16 @@ class RecieverWithNestedExtensionInCompanion{
 
     companion object{
         val companionMemberProp: Int = 0
+
+        /**
+         * Here is a [this] link. It will go to the [RecieverWithNestedExtensionInCompanion]
+         */
         fun RecieverWithNestedExtensionInCompanion.extensionForParentInCompanion(){}
 
+
+        /**
+         * Here is a [this] link. It will go to the [String]
+         */
         fun String.externalExtensionToStdLibInCompanion(){
         }
     }

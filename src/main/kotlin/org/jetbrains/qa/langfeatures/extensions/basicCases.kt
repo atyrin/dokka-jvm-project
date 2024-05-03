@@ -6,6 +6,9 @@ package org.jetbrains.qa.langfeatures.extensions
  */
 class BasicFunReceiver
 
+/**
+ * There is 2 references [this] and [BasicFunReceiver] that should lead to the same place in K2
+ */
 fun BasicFunReceiver.extensionFun1(){}
 fun BasicFunReceiver.extensionFun2(){}
 
@@ -15,6 +18,10 @@ fun BasicFunReceiver.extensionFun2(){}
  */
 class BasicValReceiver
 
+
+/**
+ * There is 2 references [this] and [BasicValReceiver] that should lead to the same place in K2
+ */
 val BasicValReceiver.extensionVal1: Int
     get() = 0
 val BasicValReceiver.extensionVal2: String
