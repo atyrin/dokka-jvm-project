@@ -128,7 +128,7 @@ tasks.dokkaHtml.configure {
 //                val relPath = rootProject.projectDir.toPath().relativize(projectDir.toPath())
 //                localDirectory.set(project.rootDir)
                 localDirectory.set(projectDir.resolve("src"))
-                remoteUrl.set(URI("https://jetbrains.team/p/kqa/repositories/atyrin-test-projects/files/dokka-jvm-project/src").toURL())
+                remoteUrl.set(URI("https://jetbrains.team/p/kqa/repositories/dokka-jvm-project/files/src").toURL())
                 remoteLineSuffix.set("?tab=source&line=")
             }
         }
