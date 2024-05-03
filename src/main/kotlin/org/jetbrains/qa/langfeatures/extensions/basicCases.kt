@@ -1,7 +1,8 @@
 package org.jetbrains.qa.langfeatures.extensions
 
 /**
- * Reviever without own members and only fun extensions
+ * Reviever without own members and only fun extensions.
+ * Extensions: [BasicFunReceiver.extensionFun1] and [BasicFunReceiver.extensionFun2]
  */
 class BasicFunReceiver
 
@@ -9,7 +10,8 @@ fun BasicFunReceiver.extensionFun1(){}
 fun BasicFunReceiver.extensionFun2(){}
 
 /**
- * Reviever without own members and only fun extensions
+ * Reviever without own members and only fun extensions.
+ * Extensions: [BasicValReceiver.extensionVal1] and [BasicValReceiver.extensionVal2]
  */
 class BasicValReceiver
 
@@ -20,7 +22,9 @@ val BasicValReceiver.extensionVal2: String
 
 
 /**
- * Reciever with fun members and extension
+ * Reciever with fun members and extension.
+ * Extension: [RecieverWithFunMembers.extensionFun1()]
+ * Members: [RecieverWithFunMembers.member]
  */
 class RecieverWithFunMembers{
     fun member(){}
