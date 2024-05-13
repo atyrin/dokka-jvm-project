@@ -1,4 +1,4 @@
-package org.jetbrains.qa.dependencies
+package org.jetbrains.qa.kdoc.rendering.links
 
 /**
  * A various Links to stdlib documentation
