@@ -2,6 +2,7 @@ package org.jetbrains.qa.inheritence
 
 import org.jetbrains.qa.java.members.JClassWithPublicFullAccessedProps
 import org.jetbrains.qa.java.members.JClassWithPublicReadOnlyProps
+import org.jetbrains.qa.java.members.JavaClassWithNested
 import org.jetbrains.qa.java.members.JavaClassWithProperties
 
 
@@ -10,6 +11,12 @@ open class InheritJClassWithPublicReadOnlyProps: JClassWithPublicReadOnlyProps()
 
 open class InheritJavaProperties: JavaClassWithProperties(){
     protected val protectedX: Int = 0
+}
+
+/**
+ * Inherit a Java class with nested class
+ */
+open class InheritJavaNested: JavaClassWithNested(){
 }
 
 
