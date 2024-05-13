@@ -202,3 +202,4 @@ dkms.conf
 # Android studio 3.1+ serialized cache file
 
 *.podspec
+.DS_Store
