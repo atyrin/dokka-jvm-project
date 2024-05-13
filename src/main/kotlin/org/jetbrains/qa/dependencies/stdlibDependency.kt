@@ -28,6 +28,20 @@ class KotlinLangStdLibLinks {
     }
 
     /**
+     * [Set]
+     */
+    fun navigationToKotlinLangSet(): Set<String> {
+        TODO()
+    }
+
+    /**
+     * [Map] of [String] to [ByteArray]
+     */
+    fun navigationToKotlinLangMap(): Map<String, ByteArray> {
+        TODO()
+    }
+
+    /**
      * [Char]
      */
     fun navigationToKotlinLangChar(): Char {
