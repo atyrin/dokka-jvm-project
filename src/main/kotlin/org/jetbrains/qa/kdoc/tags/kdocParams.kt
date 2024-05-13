@@ -1,4 +1,4 @@
-package org.jetbrains.qa.kdoc.location
+package org.jetbrains.qa.kdoc.tags
 
 import java.io.StringReader
 
