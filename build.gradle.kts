@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "org.jetbrains.qa"
-version = "1.9.0"
+version = "2.0.0"
 
 kotlin {
     jvmToolchain(17)
@@ -32,7 +32,8 @@ buildscript {
         val dokka_version: String by project
         classpath("org.jetbrains.dokka:dokka-base:$dokka_version")
         classpath("org.jetbrains.dokka:versioning-plugin:$dokka_version")
-        classpath("org.jetbrains.qa:dokka-test-plugin")
+
+        classpath("org.jetbrains.qa:dokka-test-plugin") // see included build
     }
 }
 
@@ -50,7 +51,7 @@ dependencies {
     implementation("io.ktor:ktor-client-cio:$ktor_version")
 
     val dokka_version: String by project
-//    dokkaHtmlPlugin("com.glureau:html-mermaid-dokka-plugin:0.4.4")
+    dokkaHtmlPlugin("com.glureau:html-mermaid-dokka-plugin:0.4.4")
     dokkaHtmlPlugin("org.jetbrains.dokka:versioning-plugin:$dokka_version")
     dokkaHtmlPlugin("org.jetbrains.qa:dokka-test-plugin")
 //    dokkaHtmlPlugin("org.jetbrains.dokka:javadoc-plugin:$dokka_version")
@@ -83,18 +84,25 @@ tasks.dokkaHtml.configure {
     dokkaSourceSets {
         configureEach {
             moduleName.set("Dokka JVM Project")
+
+            // override output location
             val dokka_output_name: String? by project
             outputDirectory.set(layout.buildDirectory.dir(dokka_output_name ?: "dokka"))
+
+            // change location for links to JDK references
             jdkVersion.set(17)
+
 //            suppress.set(false)
 //            suppressInheritedMembers.set(true)
 //            suppressObviousFunctions.set(true)
 
             includes.from("extra.md")
+
             samples.from(
                 "src/main/kotlin/org/jetbrains/qa/kdoc/rendering/samples/samples.kt",
                 "src/main/kotlin/org/jetbrains/qa/kdoc/rendering/samples/samplesWithDependencies.kt",
             )
+
             documentedVisibilities.set(
                 setOf(
                     org.jetbrains.dokka.DokkaConfiguration.Visibility.PUBLIC,
@@ -110,23 +118,21 @@ tasks.dokkaHtml.configure {
                 matchingRegex.set("kotlin($|\\.).*")
 
                 // All options are optional
-                skipDeprecated.set(false)
-                reportUndocumented.set(true) // Emit warnings about not documented members
-                includeNonPublic.set(false) // Deprecated, prefer using documentedVisibilities
+//                skipDeprecated.set(false)
+//                reportUndocumented.set(true)
 
                 // Visibilities that should be included in the documentation
                 // If set by user, overrides includeNonPublic. Default is PUBLIC
             }
+
             // Suppress a package
             perPackageOption {
                 matchingRegex.set(""".*\.internal.*""") // will match all .internal packages and sub-packages
                 suppress.set(true)
             }
 
+            // add (sources) to the signature line and navigate to sources
             sourceLink {
-                // Unix based directory relative path to the root of the project (where you execute gradle respectively).
-//                val relPath = rootProject.projectDir.toPath().relativize(projectDir.toPath())
-//                localDirectory.set(project.rootDir)
                 localDirectory.set(projectDir.resolve("src"))
                 remoteUrl.set(URI("https://jetbrains.team/p/kqa/repositories/dokka-jvm-project/files/src").toURL())
                 remoteLineSuffix.set("?tab=source&line=")
@@ -142,11 +148,12 @@ tasks.dokkaHtml.configure {
 //                file("css/logo-styles.css"),
 //                file("prism.css")
         )
-        footerMessage = "Stored XSS JVM Only Module"
+        footerMessage = "Custom Footer Message (tm)"
         templatesDir = file("templates")
 //            separateInheritedMembers = true
-//        homepageLink = "https://github.com/Kotlin/kotlinx-atomicfu" // starting 1.9.20
+        homepageLink = "https://github.com/Kotlin/dokka" // starting 1.9.20
     }
+
 
     pluginConfiguration<VersioningPlugin, VersioningConfiguration> {
         version = "2.0.0"
