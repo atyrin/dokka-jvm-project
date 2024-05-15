@@ -160,3 +160,12 @@ fun String.extensionOverload(){
 fun Any.extensionOverload(){
 
 }
+
+/**
+ * Also: https://github.com/Kotlin/dokka/issues/3612
+ * Call [OverloadWithDifferentDeclarations.me] -- unclear where it will navigate.
+ */
+class OverloadWithDifferentDeclarations{
+    val me: String = ""
+    fun me() {}
+}
