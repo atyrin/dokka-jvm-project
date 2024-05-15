@@ -80,7 +80,6 @@ dependencies {
 //}
 
 tasks.dokkaHtml.configure {
-    moduleName = ""
     dokkaSourceSets {
         configureEach {
             moduleName.set("Dokka JVM Project")
