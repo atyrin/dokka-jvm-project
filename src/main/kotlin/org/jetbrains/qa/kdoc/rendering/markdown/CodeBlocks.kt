@@ -8,11 +8,25 @@ class CodeBlocks {
 
     /**
      * Some sample of Kotlin code but without explicit lng -- should be kotlin by default.
+     *
+     * Sample for code block with unspecified lang
      * ```
      * inline class A(val a: Int)
      * ```
+     * end of kdoc
      */
     fun plain(){}
+
+
+    /**
+     * https://github.com/Kotlin/dokka/issues/3609
+     * Some sample of Kotlin code but without explicit lng -- should be kotlin by default.
+     *
+     * Sample for code block with unspecified lang
+     * `inline class A(val a: Int)`
+     * end of kdoc
+     */
+    fun plainInline(){}
 
 
     /**
