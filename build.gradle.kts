@@ -59,27 +59,7 @@ dependencies {
 }
 
 
-//tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
-//    //"customStyleSheets": ["${file("css/app.css")}"],
-//    //"templatesDir": "${file("templates")}",
-//    val dokkaBaseConfiguration = """
-//    {
-//
-//      "footerMessage": "(c) 2022 MyOrg",
-//      "separateInheritedMembers": false,
-//
-//      "mergeImplicitExpectActualDeclarations": false
-//    }
-//    """
-//    pluginsMapConfiguration.set(
-//        mapOf(
-//            // fully qualified plugin name to json configuration
-//            "org.jetbrains.dokka.base.DokkaBase" to dokkaBaseConfiguration
-//        )
-//    )
-//}
-
-tasks.dokkaHtml.configure {
+tasks.dokkaHtml {
     dokkaSourceSets {
         configureEach {
             moduleName.set("Dokka JVM Project")
@@ -112,21 +92,9 @@ tasks.dokkaHtml.configure {
                 )
             )
 
-            perPackageOption {
-                // will match kotlin and all sub-packages of it
-                matchingRegex.set("kotlin($|\\.).*")
-
-                // All options are optional
-//                skipDeprecated.set(false)
-//                reportUndocumented.set(true)
-
-                // Visibilities that should be included in the documentation
-                // If set by user, overrides includeNonPublic. Default is PUBLIC
-            }
-
             // Suppress a package
             perPackageOption {
-                matchingRegex.set(""".*\.internal.*""") // will match all .internal packages and sub-packages
+                matchingRegex.set(""".*\.secret.*""") // will match all .internal packages and sub-packages
                 suppress.set(true)
             }
 
@@ -140,7 +108,6 @@ tasks.dokkaHtml.configure {
     }
 
     pluginConfiguration<org.jetbrains.dokka.base.DokkaBase, org.jetbrains.dokka.base.DokkaBaseConfiguration> {
-//            customAssets = listOf(file("<path to asset>"))
         customAssets = listOf(file("css/homeIcon.svg"))
         customStyleSheets = listOf(
             file("css/homeIcon.css"),

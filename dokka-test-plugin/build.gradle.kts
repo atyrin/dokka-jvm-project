@@ -59,14 +59,5 @@ publishing {
             }
         }
     }
-
-    repositories {
-        maven("https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
-            credentials {
-                username = System.getenv("SONATYPE_USER")
-                password = System.getenv("SONATYPE_PASSWORD")
-            }
-        }
-    }
 }
 
