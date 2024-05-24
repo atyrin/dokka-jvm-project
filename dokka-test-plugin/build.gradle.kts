@@ -1,7 +1,7 @@
 val dokka_version:String by project
 plugins {
 
-    kotlin("jvm") version "2.0.0-RC3"
+    kotlin("jvm") version "2.0.0"
     id("org.jetbrains.dokka") version "2.0.0-test-9fba5726c1918036cf00f8ea2d126ad45c57102a" // Used to create a javadoc jar
 //    id("org.jetbrains.dokka") version "1.9.10" // Used to create a javadoc jar
     `maven-publish`

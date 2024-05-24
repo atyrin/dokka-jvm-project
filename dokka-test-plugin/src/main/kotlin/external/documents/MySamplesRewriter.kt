@@ -12,7 +12,6 @@ class MySamplesRewriter: SampleRewriter {
     }
 }
 
-
 class FCW: FunctionCallRewriter {
     override fun rewrite(arguments: List<String>, typeArguments: List<String>): String {
         return "// <here was function [replaceMe(...)] but plugin replaced it>"

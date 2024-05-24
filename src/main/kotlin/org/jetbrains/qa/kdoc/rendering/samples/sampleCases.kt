@@ -34,3 +34,11 @@ fun sampleWithSomeLogic(a: Int): Int{
 fun sampleWithExternalDependencies(a: Int): Int{
     return a + 1
 }
+
+/**
+ * Samples has a reference that should be replaced by dokka-test-plugin: replaceMe -> some comment
+ * @sample [org.jetbrains.qa.kdoc.rendering.samples.samplesWithReplacement]
+ */
+fun sampleWithContentThatShouldBereplaces(a: Int): Int{
+    return a + 1
+}

@@ -17,7 +17,17 @@ fun sampleBase() {
 fun samplesComplex(): String {
     val a = 1..6
     val sum = a.sum()
-    replaceMe("sdf")
+    println(sum)
+    return sum.toString()
+}
+
+/**
+ * @suppress
+ */
+fun samplesWithReplacement(): String {
+    val a = 1..6
+    val sum = a.sum()
+    replaceMe("<- shouldBeReplaced")
     println(sum)
     return sum.toString()
 }
