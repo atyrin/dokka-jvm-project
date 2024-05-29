@@ -1,0 +1,15 @@
+[versions]
+dokka = "2.0.0-test-2683ca1d4917fb31ed3e3fbca7bfed1df593c478"
+
+[libraries]
+dokka-core = { module = "org.jetbrains.dokka:dokka-core", version.ref = "dokka" }
+dokka-base = { module = "org.jetbrains.dokka:dokka-base", version.ref = "dokka" }
+dokka-analysis-kotlin = { module = "org.jetbrains.dokka:analysis-kotlin-api", version.ref = "dokka" }
+dokka-test-api = { module = "org.jetbrains.dokka:dokka-test-api", version.ref = "dokka" }
+dokka-base-test-utils = { module = "org.jetbrains.dokka:dokka-base-test-utils", version.ref = "dokka" }
+
+[bundles]
+#groovy = ["groovy-core", "groovy-json", "groovy-nio"]
+
+[plugins]
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
