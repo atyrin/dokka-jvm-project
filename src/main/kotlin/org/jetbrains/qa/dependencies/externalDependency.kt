@@ -1,5 +1,10 @@
 package org.jetbrains.qa.dependencies
 
+import io.ktor.client.*
+import io.ktor.client.engine.cio.*
+import io.ktor.client.request.*
+import io.ktor.client.statement.*
+import io.ktor.http.*
 import org.http4k.core.Filter
 import org.http4k.core.HttpHandler
 import org.http4k.core.Method.GET
@@ -11,17 +16,20 @@ import org.http4k.routing.path
 import org.http4k.routing.routes
 
 class ExternalDependnecies {
+    val client = HttpClient(CIO)
+
     /**
-     * Function that return [HttpHandler] from external lib
-     * @return [HttpHandler]
+     * Link to the [HttpClient] doesn't work because of [https://github.com/Kotlin/dokka/issues/2444]
+     *
+     * @return [HttpStatusCode]
+     * @param client ktor [HttpClient]
      */
-    fun ktor(): HttpHandler = routes(
-        "/ping" bind GET to { _: Request -> Response(OK).body("pong!") },
-        "/greet/{name}" bind GET to { req: Request ->
-            val name: String? = req.path("name")
-            Response(OK).body("hello ${name ?: "anon!"}")
-        }
-    )
+    suspend fun ktorClient(client: HttpClient): HttpStatusCode {
+        val response: HttpResponse = client.get("https://ktor.io/")
+        println(response.status)
+        println(response.bodyAsText())
+        return response.status
+    }
 
     /**
      * Property with type [Filter]

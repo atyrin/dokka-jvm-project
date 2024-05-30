@@ -94,6 +94,13 @@ tasks.dokkaHtml {
                 remoteUrl.set(URI("https://jetbrains.team/p/kqa/repositories/dokka-jvm-project/files/src").toURL())
                 remoteLineSuffix.set("?tab=source&line=")
             }
+
+            externalDocumentationLink {
+                url.set(URI("https://api.ktor.io/").toURL())
+                packageListUrl.set(
+                    rootProject.projectDir.resolve("ktor-package-list.txt").toURL()
+                )
+            }
         }
     }
 
