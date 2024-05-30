@@ -17,18 +17,26 @@ Descr for module with name `modName`: SHOULDN'T BE VISIBLE
 Description from MD file: Package with samples with different location of kdocs
 
 
-# Package org.jetbrains.qa.signatures
-## Sample code snippet
+# Package org.jetbrains.qa.layouts.md_description
+## Documentation in markdown
 
-Text after this heading is also part of documentation for `org.jetbrains.kotlin.demo`
+Text after this heading is also part of documentation for package [org.jetbrains.qa.layouts.md_description]
 
 ```kt
 @Annotation
 fun x(`param dd`: String){}
 ```
 
-## Sample for tabs
-@see [org.jetbrains.qa.signatures.overloads.OverloadedClass] comment
-@see [org.jetbrains.qa.signatures.overloads] package
-@see [OverloadedClass] comment
-@sample [org.jetbrains.qa.kdoc.rendering.samples.sampleBase]
+## KDocs in MD
+We can render kdoc tags wrriten in MD!
+
+### See
+@see org.jetbrains.qa.layouts.md_description.property prop
+@see org.jetbrains.qa.layouts.md_description.function prop
+@see org.jetbrains.qa.layouts.md_description.Type type
+@see org.jetbrains.qa.layouts.md_description package
+
+### Samples
+Some troubles with EOL from see
+
+@sample org.jetbrains.qa.kdoc.rendering.samples.sampleBase
