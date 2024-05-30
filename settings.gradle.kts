@@ -8,18 +8,6 @@ pluginManagement{
         mavenLocal()
         google()
     }
-
-    resolutionStrategy {
-        eachPlugin {
-            if (requested.id.id.startsWith("org.jetbrains.kotlin")) {
-                gradle.rootProject.extra["kotlin_version"]?.let { useVersion(it as String) }
-            }
-
-            if (requested.id.id.startsWith("org.jetbrains.dokka")) {
-                gradle.rootProject.extra["dokka_version"]?.let { useVersion(it as String) }
-            }
-        }
-    }
 }
 
 rootProject.name = "dokka-jvm-project"

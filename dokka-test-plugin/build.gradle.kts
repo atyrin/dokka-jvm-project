@@ -1,6 +1,5 @@
-val dokka_version:String by project
 plugins {
-    kotlin("jvm") version "2.0.0"
+    alias(libs.plugins.kotlin)
     alias(libs.plugins.dokka)
     `maven-publish`
     signing

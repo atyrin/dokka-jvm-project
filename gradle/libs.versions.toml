@@ -1,0 +1,34 @@
+[versions]
+dokka = "2.0.0-test-2683ca1d4917fb31ed3e3fbca7bfed1df593c478"
+kotlin = "2.0.0"
+ktor = "2.3.11"
+http4k = "5.13.2.0"
+
+[libraries]
+dokka-core = { module = "org.jetbrains.dokka:dokka-core", version.ref = "dokka" }
+dokka-base = { module = "org.jetbrains.dokka:dokka-base", version.ref = "dokka" }
+dokka-versioning = { module = "org.jetbrains.dokka:versioning-plugin", version.ref = "dokka" }
+dokka-analysis-kotlin = { module = "org.jetbrains.dokka:analysis-kotlin-api", version.ref = "dokka" }
+dokka-javadoc = { module = "org.jetbrains.dokka:javadoc-plugin", version.ref = "dokka" }
+dokka-kotlin-as-java = { module = "org.jetbrains.dokka:kotlin-as-java-plugin", version.ref = "dokka" }
+dokka-test-api = { module = "org.jetbrains.dokka:dokka-test-api", version.ref = "dokka" }
+dokka-base-test-utils = { module = "org.jetbrains.dokka:dokka-base-test-utils", version.ref = "dokka" }
+
+dokka-mermaid = { module = "com.glureau:html-mermaid-dokka-plugin", version = "0.4.4" }
+
+wire-runtime = { module = "com.squareup.wire:wire-runtime", version = "4.9.3" }
+
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+
+http4k-core = { module = "org.http4k:http4k-core", version.ref = "http4k" }
+http4k-server-jetty = { module = "org.http4k:http4k-server-jetty", version.ref = "http4k" }
+http4k-client-okhttp = { module = "org.http4k:http4k-client-okhttp", version.ref = "http4k" }
+
+[bundles]
+external = ["http4k-core", "http4k-server-jetty", "http4k-client-okhttp",
+    "wire-runtime", "ktor-client-core", "ktor-client-cio"]
+
+[plugins]
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }

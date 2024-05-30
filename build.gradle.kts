@@ -1,11 +1,10 @@
 import org.jetbrains.dokka.versioning.VersioningConfiguration
 import org.jetbrains.dokka.versioning.VersioningPlugin
 import java.net.URI
-import java.net.URL
 
 plugins {
-    id("org.jetbrains.kotlin.jvm")
-    id("org.jetbrains.dokka")
+    alias(libs.plugins.kotlin)
+    alias(libs.plugins.dokka)
     id("maven-publish")
 }
 
@@ -29,33 +28,24 @@ allprojects {
 
 buildscript {
     dependencies {
-        val dokka_version: String by project
-        classpath("org.jetbrains.dokka:dokka-base:$dokka_version")
-        classpath("org.jetbrains.dokka:versioning-plugin:$dokka_version")
+        classpath(libs.dokka.base)
+        classpath(libs.dokka.versioning)
 
         classpath("org.jetbrains.qa:dokka-test-plugin") // see included build
     }
 }
 
-// used for external dependencies tests
+
 dependencies {
-    api("com.squareup.wire:wire-runtime:4.9.3")
-    implementation("junit:junit:4.13.1")
+    // used for external dependencies tests
+    implementation(libs.bundles.external)
 
-    implementation("org.http4k:http4k-core:5.13.2.0")
-    implementation("org.http4k:http4k-server-jetty:5.13.2.0")
-    implementation("org.http4k:http4k-client-okhttp:5.13.2.0")
+    dokkaHtmlPlugin(libs.dokka.versioning)
+    dokkaHtmlPlugin(libs.dokka.mermaid)
+//    dokkaHtmlPlugin(libs.dokka.javadoc)
+//    dokkaHtmlPlugin(libs.dokka.kotlin.`as`.java)
 
-    val ktor_version: String by project
-    implementation("io.ktor:ktor-client-core:$ktor_version")
-    implementation("io.ktor:ktor-client-cio:$ktor_version")
-
-    val dokka_version: String by project
-    dokkaHtmlPlugin("com.glureau:html-mermaid-dokka-plugin:0.4.4")
-    dokkaHtmlPlugin("org.jetbrains.dokka:versioning-plugin:$dokka_version")
     dokkaHtmlPlugin("org.jetbrains.qa:dokka-test-plugin")
-//    dokkaHtmlPlugin("org.jetbrains.dokka:javadoc-plugin:$dokka_version")
-//    dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:$dokka_version")
 }
 
 
