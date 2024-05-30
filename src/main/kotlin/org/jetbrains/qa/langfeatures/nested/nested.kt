@@ -30,13 +30,29 @@ class ContainerForNested{
     }
     class Nested4: Nested3AbstractClass(){
         override fun Nested3method2() {}
+
+        /**
+         * Overload function
+         */
         fun Nested3method2(i: Int) {}
     }
 
     interface Nested5Interface
 
     /**
-     * nested object [Nested6Object] in [ContainerForNested]
+     * Nested object [Nested6Object] in [ContainerForNested]
      */
     object Nested6Object
 }
+
+/**
+ * Function with references to class [ContainerForNested]
+ * @see ContainerForNested main container class
+ * @see ContainerForNested.Nested1 first nested class with method [ContainerForNested.Nested1.Nested1method]
+ * @see ContainerForNested.Nested2 second nested class with method [ContainerForNested.Nested2.Nested2method]
+ * @see ContainerForNested.Nested3AbstractClass third (abstract) nested class with [ContainerForNested.Nested3AbstractClass.Nested3method1] and [ContainerForNested.Nested3AbstractClass.Nested3method2]
+ * @see ContainerForNested.Nested4 fourth nested class with [ContainerForNested.Nested4.Nested3method1] and [ContainerForNested.Nested4.Nested3method2]
+ * @see ContainerForNested.Nested5Interface nested interface
+ * @see ContainerForNested.Nested6Object nested object
+ */
+fun nestedReferences() {}
