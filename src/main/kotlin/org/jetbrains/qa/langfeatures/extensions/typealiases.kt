@@ -13,11 +13,22 @@ typealias TypeAliasWithExtensions = ClassForTypealias
  *
  * Without params.
  */
-fun TypeAliasWithExtensions.extension1(){}
+fun TypeAliasWithExtensions.extensionOnTA1(){}
 
 /**
  * Extension for typealias [TypeAliasWithExtensions]
  * With single params.
  * @param param Integer param
+ * @receiver some description about receiver [TypeAliasWithExtensions]
  */
-fun TypeAliasWithExtensions.extension1(param: Int){}
+fun TypeAliasWithExtensions.extensionOnTA1(param: Int){
+    member()
+}
+
+/**
+ * Extension for typealias [TypeAliasWithExtensions].
+ * And also a reference to a member of type aliased type [ClassForTypealias] -- [ClassForTypealias.member]
+ * The reference: [this.member] or [member]
+ */
+fun TypeAliasWithExtensions.extensionOnTACallMember() {
+}
