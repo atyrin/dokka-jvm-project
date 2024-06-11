@@ -2,17 +2,30 @@ package org.jetbrains.qa.langfeatures.typealiases
 
 open class OpenTAClass
 typealias OpenTA = OpenTAClass
+/**
+ * More cases for extensions and typealiases see in [org.jetbrains.qa.langfeatures.extensions]
+ */
+fun OpenTA.x(){}
+
 
 /**
- * typealias with name [TypealiasToClass]
+ * TA to a [String]
+ */
+typealias TypealiasToStdlib = String
+
+/**
+ * TA to [java.io.File] from JDK
+ */
+typealias TypealiasToJava = java.io.File
+
+/**
+ * The class in used in typealias with name [TypealiasToClass]
  */
 class ClassForUsingInTypeAlias(val name: String){
     fun func(){}
 
     inner class Inner
 }
-
-fun OpenTA.x(){}
 
 /**
  * This is a typealias to local class [ClassForUsingInTypeAlias]
@@ -43,3 +56,16 @@ typealias TypeAliasToFunctionType = (Int, String, Any) -> Unit
  * Itself: [TypeAliasToFunctionTypeWithGeneric]
  */
 typealias TypeAliasToFunctionTypeWithGeneric<T> = (T) -> Boolean
+
+/**
+ * Typealias to functional type `(T, G) -> Boolean`
+ * Itself: [TypeAliasToFunctionTypeWithGeneric2Params]
+ */
+typealias TypeAliasToFunctionTypeWithGeneric2Params<T, G> = (T, G) -> Boolean
+
+
+/* visibilities */
+
+public typealias VisibilityTypeAliasPublic = String
+internal typealias VisibilityTypeAliasInternal = String
+private typealias VisibilityTypeAliasPrivate = String

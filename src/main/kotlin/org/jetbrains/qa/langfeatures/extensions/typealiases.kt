@@ -1,9 +1,23 @@
 package org.jetbrains.qa.langfeatures.extensions
 
-class ClassForTypealias
+class ClassForTypealias{
+    fun member(){}
+}
 
 
-typealias TAtoA = ClassForTypealias
+typealias TypeAliasWithExtensions = ClassForTypealias
 
+/**
+ * Extension for typealias [TypeAliasWithExtensions].
+ * Also see [this] reference.
+ *
+ * Without params.
+ */
+fun TypeAliasWithExtensions.extension1(){}
 
-fun TAtoA.extesionToTypealias(){}
+/**
+ * Extension for typealias [TypeAliasWithExtensions]
+ * With single params.
+ * @param param Integer param
+ */
+fun TypeAliasWithExtensions.extension1(param: Int){}
