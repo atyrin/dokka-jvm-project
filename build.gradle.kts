@@ -15,17 +15,6 @@ kotlin {
     jvmToolchain(17)
 }
 
-allprojects {
-    repositories {
-        mavenCentral()
-        maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev")
-        maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/test")
-        maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
-        maven("https://oss.sonatype.org/service/local/repositories/orgjetbrainsdokka-1101/content/")
-        mavenLocal()
-    }
-}
-
 buildscript {
     dependencies {
         classpath(libs.dokka.base)
@@ -75,10 +64,10 @@ tasks.dokkaHtml {
             documentedVisibilities.set(
                 setOf(
                     org.jetbrains.dokka.DokkaConfiguration.Visibility.PUBLIC,
-                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PROTECTED,
-                    org.jetbrains.dokka.DokkaConfiguration.Visibility.INTERNAL,
-                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PRIVATE,
-                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PACKAGE
+//                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PROTECTED,
+//                    org.jetbrains.dokka.DokkaConfiguration.Visibility.INTERNAL,
+//                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PRIVATE,
+//                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PACKAGE
                 )
             )
 

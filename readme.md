@@ -1,5 +1,8 @@
 # Dokka test project
 
+## Set Dokka version
+Use gradle/libs.versions.toml to set required Dokka version.
+
 ## Generate dokka
 Run `./gradlew dokkaHtml` task
 

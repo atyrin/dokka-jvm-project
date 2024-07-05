@@ -8,12 +8,6 @@ plugins {
 group = "org.jetbrains.qa"
 version = "2.0"
 
-repositories {
-    mavenCentral()
-    maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev")
-    maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/test")
-}
-
 dependencies {
     compileOnly(libs.dokka.core)
     implementation(libs.dokka.base)
