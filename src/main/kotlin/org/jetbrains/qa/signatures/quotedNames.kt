@@ -27,6 +27,6 @@ class `Quoted Class Name`() {
 }
 
 /**
- * Class [Class With Quoted Name]
+ * Class [Class With Quoted Name] // https://github.com/Kotlin/dokka/issues/3356
  */
 class `Class With Quoted Name`

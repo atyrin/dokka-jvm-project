@@ -4,7 +4,6 @@ class ClassForTypealias{
     fun member(){}
 }
 
-
 typealias TypeAliasWithExtensions = ClassForTypealias
 
 /**
@@ -28,7 +27,7 @@ fun TypeAliasWithExtensions.extensionOnTA1(param: Int){
 /**
  * Extension for typealias [TypeAliasWithExtensions].
  * And also a reference to a member of type aliased type [ClassForTypealias] -- [ClassForTypealias.member]
- * The reference: [this.member] or [member]
+ * The reference: [this.member] or [member] // https://github.com/Kotlin/dokka/issues/3521
  */
 fun TypeAliasWithExtensions.extensionOnTACallMember() {
 }
