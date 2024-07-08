@@ -13,10 +13,15 @@ import java.io.StringReader
  * @see [org.jetbrains.qa.kdoc.rendering.edgecases.LongPackageName] some comment 03
  * @see [MyExternalLink](http://google.com)
  */
-class ClassWithLongSeeAlsoList(val a: String) {
+class ClassWithLongSeeAlsoList(val propInPrimaryConstructor: String) {
+
+    val propInBody: String = ""
 
     /**
-     * Adds a [a] to this group. [a] is a property from constructor
+     * Adds a [propInPrimaryConstructor] to this group. [propInPrimaryConstructor] is a property from constructor
+     *
+     * Adds a [propInBody] to this group. [propInBody] is a property in the class body
+     *
      * @see [java.applet.AppletContext] some comment 01
      * @see [java.io.StringReader] some comment 02
      * @see [java.beans.DefaultPersistenceDelegate] some comment 03
@@ -25,11 +30,11 @@ class ClassWithLongSeeAlsoList(val a: String) {
      * @author Lorem Ipsum
      */
     fun funWith3SeeAlso(): StringReader {
-        return StringReader(a)
+        return StringReader(propInPrimaryConstructor)
     }
 
     /**
-     * Adds a [a] to this group.
+     * Adds a [propInPrimaryConstructor] to this group.
      * @return the new size of the group.
      * @since 1.1
      * @suppress

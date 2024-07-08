@@ -31,6 +31,7 @@ class ConstructorTagSecondaryNonTag{
     /**
      * description for secondary constructor
      * Reference to class: [ConstructorTagSecondaryNonTag]
+     * Issue with K2: https://github.com/Kotlin/dokka/issues/3604
      */
     constructor(secondary: String)
 }

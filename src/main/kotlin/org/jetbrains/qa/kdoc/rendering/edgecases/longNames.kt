@@ -37,10 +37,12 @@ class LONG_PACKAGE_NAME_AND_EVEN_MORE_LONG_CLASS_NAME {
     }
 }
 
+/**
+ * May hav issue with resolve from name: https://github.com/Kotlin/dokka/issues/2464
+ */
 enum class LongNamedEntries{
     DEFAULT_CENTER_BACKGROUND_ALPHA,
     DEFAULT_CENTER_BACKGROUND_BETA,
     LONG_PACKAGE_NAME_AND_EVEN_MORE_LONG_CLASS_NAME
 }
-
 

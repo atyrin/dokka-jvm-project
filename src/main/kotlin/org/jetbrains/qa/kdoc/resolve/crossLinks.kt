@@ -1,7 +1,7 @@
-package org.jetbrains.qa.kdoc.location
+package org.jetbrains.qa.kdoc.resolve
 
 /**
- * Class contrain parameters that used in [CrossLinksConsumer]
+ * Class contains parameters that used in [CrossLinksConsumer]
  * @param propInConstructorWithKDoc some prop but in constructor
  * @param internalPropInConstructorWithKDoc some prop but in constructor with internal mod
  * @param paramWithKDoc some param
@@ -15,14 +15,24 @@ class CrossLinksSource(
     param: String,
     paramWithKDoc: String,
 
-){
+    ) {
     val property: Int = 0
     val propertyWithKDoc: Int = 0
+
+    fun sourceFunction() {}
+
+    class NestedClass {
+        fun nestedFunction() {}
+    }
+
+    inner class InnerClass {
+        fun innerFunction() {}
+    }
 }
 
 
 /**
- * Description has a links to parameters of another class @see [CrossLinksSource.param] (unresolves as param)
+ * Description has links to parameters of another class @see [CrossLinksSource.param] (unresolves as param)
  *  see [CrossLinksSource.paramWithKDoc] (unresolves as param)
  *  see [CrossLinksSource.internalPropInConstructorWithKDoc] \n
  *  See [CrossLinksSource.internalPropInConstructor] \n
@@ -30,12 +40,17 @@ class CrossLinksSource(
  *  See [CrossLinksSource.propInConstructorWithKDoc]
  *  See [CrossLinksSource.property]
  *  See [CrossLinksSource.propertyWithKDoc]
+ *  See [CrossLinksSource.sourceFunction]
+ *  See [CrossLinksSource.NestedClass]
+ *  See [CrossLinksSource.NestedClass.nestedFunction]
+ *  See [CrossLinksSource.InnerClass]
+ *  See [CrossLinksSource.InnerClass.innerFunction]
  *  See [CrossLinksSource]
 
  * @see [CrossLinksSource.paramWithKDoc] unresolves as param
  * @see [CrossLinksSource.internalPropInConstructorWithKDoc] resolved
  */
-fun String.crossLinksInExtension(){
+fun String.crossLinksInExtension() {
 }
 
 /**
@@ -48,8 +63,13 @@ fun String.crossLinksInExtension(){
  * See [CrossLinksSource.propInConstructorWithKDoc]
  * See [CrossLinksSource.property]
  * See [CrossLinksSource.propertyWithKDoc]
+ *
+ * See [CrossLinksSource.sourceFunction]
+ * See [CrossLinksSource.NestedClass]
+ * See [CrossLinksSource.NestedClass.nestedFunction]
+ * See [CrossLinksSource.InnerClass]
+ * See [CrossLinksSource.InnerClass.innerFunction]
+ *
  * See [CrossLinksSource]
  */
-class CrossLinksConsumer{
-
-}
+class CrossLinksConsumer
