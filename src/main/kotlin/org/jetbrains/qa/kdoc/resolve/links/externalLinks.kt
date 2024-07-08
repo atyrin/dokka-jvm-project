@@ -1,4 +1,4 @@
-package org.jetbrains.qa.kdoc.rendering.links
+package org.jetbrains.qa.kdoc.resolve.links
 
 /**
  * Links to embeded external resource: Android SDK, JDK
