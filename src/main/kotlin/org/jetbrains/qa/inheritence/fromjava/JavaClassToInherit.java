@@ -1,4 +1,4 @@
-package org.jetbrains.qa.inheritence;
+package org.jetbrains.qa.inheritence.fromjava;
 
 /**
  * Root package Java class

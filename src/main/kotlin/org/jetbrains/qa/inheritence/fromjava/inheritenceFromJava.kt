@@ -1,13 +1,26 @@
-package org.jetbrains.qa.inheritence
+package org.jetbrains.qa.inheritence.fromjava
 
 import org.jetbrains.qa.java.members.JClassWithPublicFullAccessedProps
 import org.jetbrains.qa.java.members.JClassWithPublicReadOnlyProps
 import org.jetbrains.qa.java.members.JavaClassWithNested
 import org.jetbrains.qa.java.members.JavaClassWithProperties
 
+/**
+ * Open class inherited from a Java class [JClassWithPublicFullAccessedProps]
+ * All props there have a setter.
+ */
+open class OpenInheritJClassWithPublicFullAccessedProps: JClassWithPublicFullAccessedProps(){
 
-open class InheritJClassWithPublicFullAccessedProps: JClassWithPublicFullAccessedProps()
+}
+
+/**
+ * Final class inherited from a Java class [JClassWithPublicFullAccessedProps]
+ * All props there have a setter.
+ */
+class FinalInheritJClassWithPublicFullAccessedProps: JClassWithPublicFullAccessedProps()
 open class InheritJClassWithPublicReadOnlyProps: JClassWithPublicReadOnlyProps()
+
+
 
 open class InheritJavaProperties: JavaClassWithProperties(){
     protected val protectedX: Int = 0
@@ -22,11 +35,18 @@ open class InheritJavaNested: JavaClassWithNested(){
 
 @Suppress
 fun use(){
-    InheritJavaProperties().a = 0
+    InheritJavaProperties().publicGetterAndPublicSetter = 0
+    val str = InheritJavaProperties().publicGetterAndPublicSetterString
+    val str2 = JavaClassWithProperties().publicGetterAndPublicSetterString
+
+    if(str != null){
+        print("")
+    }
 
 
-    InheritJClassWithPublicFullAccessedProps().publicPropertyWithNoGetterNoSetter = 0
-    InheritJClassWithPublicFullAccessedProps().publicPropertyWithProtectedGetterProtectedSetter = 0
+
+    OpenInheritJClassWithPublicFullAccessedProps().publicPropertyWithNoGetterNoSetter = 0
+    OpenInheritJClassWithPublicFullAccessedProps().publicPropertyWithProtectedGetterProtectedSetter = 0
 }
 
 open class KotlinParent{

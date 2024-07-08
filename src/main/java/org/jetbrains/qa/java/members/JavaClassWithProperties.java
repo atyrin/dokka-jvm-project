@@ -1,29 +1,24 @@
 package org.jetbrains.qa.java.members;
 
-public class JavaClassWithProperties{
-    public int publicProperty = 0;
+public class JavaClassWithProperties {
+    public int publicPropertyInt = 0;
+    public String publicPropertyString = null;
     int defaultProperty = 0;
     private int privateProperty = 0;
     protected int protectedProperty = 0;
     private int publicGetterAndPublicSetter = 0;
+    private String publicGetterAndPublicSetterString = null;
     private int protectedGetterAndProtectedSetter = 0;
     private int privateGetterAndPrivateSetter = 0;
     private int publicGetterAndPrivateSetter = 0;
     private int publicGetterNoSetter = 0;
     private int noGetterPublicSetter = 0;
 
-    private int a = 0;
-
-    public int getA() {
-        return a;
+    public JavaClassWithProperties() {
     }
 
-    public void setA(int a) {
-        this.a = a;
+    public JavaClassWithProperties(int i) {
     }
-
-    public JavaClassWithProperties(){}
-    public JavaClassWithProperties(int i){}
 
     public int getPublicGetterAndPublicSetter() {
         return publicGetterAndPublicSetter;
@@ -71,5 +66,13 @@ public class JavaClassWithProperties{
 
     public void setUnexistingProperty() {
 
+    }
+
+    public String getPublicGetterAndPublicSetterString() {
+        return publicGetterAndPublicSetterString;
+    }
+
+    public void setPublicGetterAndPublicSetterString(String publicGetterAndPublicSetterString) {
+        this.publicGetterAndPublicSetterString = publicGetterAndPublicSetterString;
     }
 }

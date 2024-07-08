@@ -1,4 +1,4 @@
-package org.jetbrains.qa.inheritence
+package org.jetbrains.qa.inheritence.fromjava
 
 open class ExtensionParentRoot
 open class ExtensionParentFirst: ExtensionParentRoot()
