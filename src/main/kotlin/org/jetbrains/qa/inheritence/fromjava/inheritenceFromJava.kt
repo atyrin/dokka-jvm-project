@@ -1,55 +1,55 @@
 package org.jetbrains.qa.inheritence.fromjava
 
-import org.jetbrains.qa.java.members.JClassWithPublicFullAccessedProps
-import org.jetbrains.qa.java.members.JClassWithPublicReadOnlyProps
+import org.jetbrains.qa.java.members.JClassAllAccessorForPackagePrivateField
+import org.jetbrains.qa.java.members.JClassAllAccessorForPrivateField
+import org.jetbrains.qa.java.members.JClassAllAccessorForProtectedField
+import org.jetbrains.qa.java.members.JClassAllAccessorForPublicField
+import org.jetbrains.qa.java.members.JClassFieldsOnly
+import org.jetbrains.qa.java.members.JClassMismatchedGetterAndSetterVisibility
+import org.jetbrains.qa.java.members.JClassWithEdgeCases
+import org.jetbrains.qa.java.members.JClassWithGettersOnly
+import org.jetbrains.qa.java.members.JClassWithSettersOnly
 import org.jetbrains.qa.java.members.JavaClassWithNested
-import org.jetbrains.qa.java.members.JavaClassWithProperties
 
-/**
- * Open class inherited from a Java class [JClassWithPublicFullAccessedProps]
- * All props there have a setter.
- */
-open class OpenInheritJClassWithPublicFullAccessedProps: JClassWithPublicFullAccessedProps(){
+// K2 ticket for cases where getter/setter have more narrow visibility than field
+// https://github.com/Kotlin/dokka/issues/3339
 
-}
+final class InheritJClassAllAccessorForPackagePrivateFieldFinal : JClassAllAccessorForPackagePrivateField()
+open class InheritJClassAllAccessorForPackagePrivateFieldOpen : JClassAllAccessorForPackagePrivateField()
 
-/**
- * Final class inherited from a Java class [JClassWithPublicFullAccessedProps]
- * All props there have a setter.
- */
-class FinalInheritJClassWithPublicFullAccessedProps: JClassWithPublicFullAccessedProps()
-open class InheritJClassWithPublicReadOnlyProps: JClassWithPublicReadOnlyProps()
+final class InheritJClassAllAccessorForPrivateFieldFinal : JClassAllAccessorForPrivateField()
+open class InheritJClassAllAccessorForPrivateFieldOpen : JClassAllAccessorForPrivateField()
+
+final class InheritJClassAllAccessorForProtectedFieldFinal : JClassAllAccessorForProtectedField()
+open class InheritJClassAllAccessorForProtectedFieldOpen : JClassAllAccessorForProtectedField()
+
+final class InheritJClassAllAccessorForPublicFieldFinal : JClassAllAccessorForPublicField()
+open class InheritJClassAllAccessorForPublicFieldOpen : JClassAllAccessorForPublicField()
+
+final class InheritJClassFieldsOnlyFinal : JClassFieldsOnly()
+open class InheritJClassFieldsOnlyOpen : JClassFieldsOnly()
+
+final class InheritJClassWithGettersOnlyFinal : JClassWithGettersOnly()
+open class InheritJClassWithGettersOnlyOpen : JClassWithGettersOnly()
+
+final class InheritJClassWithSettersOnlyFinal : JClassWithSettersOnly()
+open class InheritJClassWithSettersOnlyOpen : JClassWithSettersOnly()
 
 
+final class InheritJClassMismatchedGetterAndSetterVisibilityFinal : JClassMismatchedGetterAndSetterVisibility()
+open class InheritJClassMismatchedGetterAndSetterVisibilityOpen : JClassMismatchedGetterAndSetterVisibility()
 
-open class InheritJavaProperties: JavaClassWithProperties(){
+
+open class InheritJEdgeCases : JClassWithEdgeCases() {
     protected val protectedX: Int = 0
 }
 
 /**
  * Inherit a Java class with nested class
  */
-open class InheritJavaNested: JavaClassWithNested(){
-}
+open class InheritJavaNested : JavaClassWithNested()
 
-
-@Suppress
-fun use(){
-    InheritJavaProperties().publicGetterAndPublicSetter = 0
-    val str = InheritJavaProperties().publicGetterAndPublicSetterString
-    val str2 = JavaClassWithProperties().publicGetterAndPublicSetterString
-
-    if(str != null){
-        print("")
-    }
-
-
-
-    OpenInheritJClassWithPublicFullAccessedProps().publicPropertyWithNoGetterNoSetter = 0
-    OpenInheritJClassWithPublicFullAccessedProps().publicPropertyWithProtectedGetterProtectedSetter = 0
-}
-
-open class KotlinParent{
+open class KotlinParent {
     public var publicVarProperty = 0
     var defaultVarProperty = 0
     private val privateVarProperty = 0
@@ -62,22 +62,26 @@ open class KotlinParent{
 
     var varPropWithGetterAndSetter: Int = 0
         get() = 0
-        set(value) {field = value}
+        set(value) {
+            field = value
+        }
 
 
     var varPropWithGetterAndPrivateSetter = 0
         get() = 0
-        private set(value) {field = value}
+        private set(value) {
+            field = value
+        }
 }
 
-class KotlinChild: JavaClassToInherit("str")
+class KotlinChild : JavaClassToInherit("str")
 
 
 /**
  * Kotlin class where companion inherit Java class
  */
-class KotlinCompanionChild{
-    companion object: JavaClassToInherit("str"){
+class KotlinCompanionChild {
+    companion object : JavaClassToInherit("str") {
 
     }
 }
