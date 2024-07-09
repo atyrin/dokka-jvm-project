@@ -74,7 +74,11 @@ open class KotlinParent {
         }
 }
 
-class KotlinChild : JavaClassToInherit("str")
+class KotlinChild : JavaClassToInherit("str") {
+    override fun funToOverride(): Int {
+        return super.funToOverride()
+    }
+}
 
 
 /**

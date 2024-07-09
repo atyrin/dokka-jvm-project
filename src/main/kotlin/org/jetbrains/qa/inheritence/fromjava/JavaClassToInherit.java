@@ -11,6 +11,10 @@ public class JavaClassToInherit {
      */
     public Integer publicProperty;
 
+    public int funToOverride(){
+        return 0;
+    }
+
     /**
      * Constructor
      * @param a some string param in constructor
