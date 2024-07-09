@@ -2,6 +2,7 @@ pluginManagement {
     repositories {
         gradlePluginPortal()
         mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
         maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev")
         maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/test")
         mavenLocal()
@@ -10,6 +11,7 @@ pluginManagement {
 dependencyResolutionManagement {
     repositories {
         mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
         maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev")
         maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/test")
         mavenLocal()
