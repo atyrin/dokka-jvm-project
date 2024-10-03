@@ -78,6 +78,14 @@ class KotlinChild : JavaClassToInherit("str") {
     override fun funToOverride(): Int {
         return super.funToOverride()
     }
+
+    /**
+     * This leads to the rendering of [protectedProperty] on the [KotlinChild] page.
+     * Looks expected.
+     */
+    override fun getProtectedProperty(): Int {
+        return super.getProtectedProperty()
+    }
 }
 
 

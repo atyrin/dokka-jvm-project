@@ -10,6 +10,7 @@ public class JavaClassToInherit {
      * Property with public
      */
     public Integer publicProperty;
+    protected Integer protectedProperty;
 
     public int funToOverride(){
         return 0;
@@ -21,5 +22,9 @@ public class JavaClassToInherit {
      */
     public JavaClassToInherit(String a){
         System.out.println(a);
+    }
+
+    public Integer getProtectedProperty() {
+        return protectedProperty;
     }
 }
