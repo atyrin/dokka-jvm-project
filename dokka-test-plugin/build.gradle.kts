@@ -22,13 +22,14 @@ kotlin {
     jvmToolchain(8)
 }
 
-tasks.dokkaHtml {
-    outputDirectory.set(layout.buildDirectory.dir("dokka"))
+dokka {
+    dokkaPublications.html{
+        outputDirectory.set(layout.buildDirectory.dir("dokka"))
+    }
 }
 
 val javadocJar by tasks.registering(Jar::class) {
     archiveClassifier.set("javadoc")
-    from(tasks.dokkaHtml)
 }
 
 java {

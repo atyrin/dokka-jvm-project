@@ -1,5 +1,4 @@
-import org.jetbrains.dokka.versioning.VersioningConfiguration
-import org.jetbrains.dokka.versioning.VersioningPlugin
+import org.jetbrains.dokka.gradle.engine.parameters.VisibilityModifier
 import java.net.URI
 
 plugins {
@@ -37,14 +36,15 @@ dependencies {
 }
 
 
-tasks.dokkaHtml {
+dokka {
+    dokkaPublications.html {
+        // override output location
+        val dokka_output_name: String? by project
+        outputDirectory.set(layout.buildDirectory.dir(dokka_output_name ?: "dokka"))
+    }
     dokkaSourceSets {
         configureEach {
             moduleName.set("Dokka JVM Project")
-
-            // override output location
-            val dokka_output_name: String? by project
-            outputDirectory.set(layout.buildDirectory.dir(dokka_output_name ?: "dokka"))
 
             // change location for links to JDK references
             jdkVersion.set(17)
@@ -62,11 +62,8 @@ tasks.dokkaHtml {
 
             documentedVisibilities.set(
                 setOf(
-                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PUBLIC,
-                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PROTECTED,
-//                    org.jetbrains.dokka.DokkaConfiguration.Visibility.INTERNAL,
-//                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PRIVATE,
-//                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PACKAGE
+                    VisibilityModifier.Public,
+                    VisibilityModifier.Protected
                 )
             )
 
@@ -79,26 +76,29 @@ tasks.dokkaHtml {
             // add (sources) to the signature line and navigate to sources
             sourceLink {
                 localDirectory.set(projectDir.resolve("src"))
-                remoteUrl.set(URI("https://jetbrains.team/p/kqa/repositories/dokka-jvm-project/files/src").toURL())
+                remoteUrl.set(URI("https://jetbrains.team/p/kqa/repositories/dokka-jvm-project/files/src"))
                 remoteLineSuffix.set("?tab=source&line=")
             }
 
-            externalDocumentationLink {
-                url.set(URI("https://api.ktor.io/").toURL())
-                packageListUrl.set(
-                    rootProject.projectDir.resolve("ktor-package-list.txt").toURL()
-                )
+            externalDocumentationLinks {
+                create("Ktor") {
+                    url.set(URI("https://api.ktor.io/"))
+                    packageListUrl.set(
+                        rootProject.projectDir.resolve("ktor-package-list.txt").toURI()
+                    )
+                }
             }
         }
     }
 
-    pluginConfiguration<org.jetbrains.dokka.base.DokkaBase, org.jetbrains.dokka.base.DokkaBaseConfiguration> {
-        customAssets = listOf(file("css/homeIcon.svg"))
-        customStyleSheets = listOf(
-            file("css/homeIcon.css"),
-//                file("css/logo-styles.css"),
-//                file("prism.css")
-        )
+    pluginsConfiguration.html {
+        customAssets = files("css/homeIcon.svg")
+        customStyleSheets =
+            files(
+                "css/homeIcon.css",
+//                "css/logo-styles.css",
+//                "prism.css"
+            )
         footerMessage = "Custom Footer Message (tm)"
         templatesDir = file("templates")
 //            separateInheritedMembers = true
@@ -106,7 +106,7 @@ tasks.dokkaHtml {
     }
 
 
-    pluginConfiguration<VersioningPlugin, VersioningConfiguration> {
+    pluginsConfiguration.versioning {
         version = "2.0.0"
         versionsOrdering = listOf("2.0.0", "1.9.20", "1.9.10", "1.8.20", "1.8.10")
         olderVersionsDir = file("documentation/version")
