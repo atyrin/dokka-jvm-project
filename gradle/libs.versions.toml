@@ -1,6 +1,6 @@
 [versions]
-dokka = "2.0.20-SNAPSHOT"
-kotlin = "2.0.0"
+dokka = "2.0.0-Beta"
+kotlin = "2.0.21"
 ktor = "2.3.11"
 http4k = "5.13.2.0"
 

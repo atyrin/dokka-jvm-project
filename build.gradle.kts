@@ -5,7 +5,6 @@ import java.net.URI
 plugins {
     alias(libs.plugins.kotlin)
     alias(libs.plugins.dokka)
-    id("maven-publish")
 }
 
 group = "org.jetbrains.qa"
@@ -64,7 +63,7 @@ tasks.dokkaHtml {
             documentedVisibilities.set(
                 setOf(
                     org.jetbrains.dokka.DokkaConfiguration.Visibility.PUBLIC,
-//                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PROTECTED,
+                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PROTECTED,
 //                    org.jetbrains.dokka.DokkaConfiguration.Visibility.INTERNAL,
 //                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PRIVATE,
 //                    org.jetbrains.dokka.DokkaConfiguration.Visibility.PACKAGE
@@ -112,18 +111,5 @@ tasks.dokkaHtml {
         versionsOrdering = listOf("2.0.0", "1.9.20", "1.9.10", "1.8.20", "1.8.10")
         olderVersionsDir = file("documentation/version")
         renderVersionsNavigationOnAllPages = true
-    }
-}
-
-
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "local.atyrin"
-            artifactId = "dokka-jvm-project"
-            version = "1.0.1"
-
-            from(components["java"])
-        }
     }
 }
