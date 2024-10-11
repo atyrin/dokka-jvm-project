@@ -33,18 +33,24 @@ class CrossLinksSource(
 
 /**
  * Description has links to parameters of another class @see [CrossLinksSource.param] (unresolves as param)
+ * [Link With alias to prop][CrossLinksSource.property]
+ * [FQN Link With alias to prop][org.jetbrains.qa.kdoc.resolve.CrossLinksSource.property]
  *  see [CrossLinksSource.paramWithKDoc] (unresolves as param)
- *  see [CrossLinksSource.internalPropInConstructorWithKDoc] \n
- *  See [CrossLinksSource.internalPropInConstructor] \n
+ *  see [CrossLinksSource.internalPropInConstructorWithKDoc]
+ *  See [CrossLinksSource.internalPropInConstructor]
  *  See [CrossLinksSource.propInConstructor]
  *  See [CrossLinksSource.propInConstructorWithKDoc]
  *  See [CrossLinksSource.property]
+ *  See with fqn [org.jetbrains.qa.kdoc.resolve.CrossLinksSource.property]
  *  See [CrossLinksSource.propertyWithKDoc]
+ *
  *  See [CrossLinksSource.sourceFunction]
+ *
  *  See [CrossLinksSource.NestedClass]
  *  See [CrossLinksSource.NestedClass.nestedFunction]
  *  See [CrossLinksSource.InnerClass]
  *  See [CrossLinksSource.InnerClass.innerFunction]
+ *
  *  See [CrossLinksSource]
 
  * @see [CrossLinksSource.paramWithKDoc] unresolves as param
