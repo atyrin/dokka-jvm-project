@@ -1,3 +1,4 @@
+import org.jetbrains.dokka.gradle.engine.parameters.KotlinPlatform
 import org.jetbrains.dokka.gradle.engine.parameters.VisibilityModifier
 import java.net.URI
 
@@ -41,17 +42,35 @@ dokka {
         // override output location
         val dokka_output_name: String? by project
         outputDirectory.set(layout.buildDirectory.dir(dokka_output_name ?: "dokka"))
+        offlineMode.set(false)
+        failOnWarning.set(false)
     }
+//    dokkaEngineVersion.set("1.9.20")
     dokkaSourceSets {
         configureEach {
             moduleName.set("Dokka JVM Project")
+            moduleVersion.set(project.version.toString())
+//            failOnWarning.set(false)
+//            offlineMode.set(false)
 
             // change location for links to JDK references
             jdkVersion.set(17)
 
-//            suppress.set(false)
 //            suppressInheritedMembers.set(true)
 //            suppressObviousFunctions.set(true)
+
+//            suppress.set(false)
+//            displayName.set(name)
+//            reportUndocumented.set(false)
+//            skipEmptyPackages.set(true)
+//            skipDeprecated.set(false)
+//            suppressGeneratedFiles.set(true)
+//            languageVersion.set("1.7")
+//            apiVersion.set("1.7")
+//            includes.from(project.files(), "packages.md", "extra.md")
+//            analysisPlatform.set(KotlinPlatform.DEFAULT)
+//            sourceRoots.from(file("src"))
+//            classpath.from(project.files(), file("libs/dependency.jar"))
 
             includes.from("extra.md")
 
@@ -63,7 +82,7 @@ dokka {
             documentedVisibilities.set(
                 setOf(
                     VisibilityModifier.Public,
-                    VisibilityModifier.Protected
+                    VisibilityModifier.Protected,
                 )
             )
 
@@ -71,6 +90,16 @@ dokka {
             perPackageOption {
                 matchingRegex.set(""".*\.secret.*""") // will match all .internal packages and sub-packages
                 suppress.set(true)
+            }
+
+            perPackageOption {
+                matchingRegex.set(""".*\.specialoption.*""")
+                documentedVisibilities.set(
+                    setOf(
+                        VisibilityModifier.Public,
+                        VisibilityModifier.Internal,
+                    )
+                )
             }
 
             // add (sources) to the signature line and navigate to sources
@@ -107,8 +136,8 @@ dokka {
 
 
     pluginsConfiguration.versioning {
-        version = "2.0.0"
-        versionsOrdering = listOf("2.0.0", "1.9.20", "1.9.10", "1.8.20", "1.8.10")
+        version = "Current (2.0.0)"
+        versionsOrdering = listOf("Current (2.0.0)", "1.9.20", "1.9.10", "1.8.20", "1.8.10")
         olderVersionsDir = file("documentation/version")
         renderVersionsNavigationOnAllPages = true
     }
