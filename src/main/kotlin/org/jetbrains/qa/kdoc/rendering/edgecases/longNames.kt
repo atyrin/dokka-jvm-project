@@ -6,7 +6,7 @@ package org.jetbrains.qa.kdoc.rendering.edgecases
  */
 class LongPackageName {
     /**
-     * @samples [org.jetbrains.qa.kdoc.rendering.samples.sampleBase]
+     * @sample [org.jetbrains.qa.kdoc.rendering.samples.sampleBase]
      */
     fun methodWithSample(){
     }
