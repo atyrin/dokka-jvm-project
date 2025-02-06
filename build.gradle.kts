@@ -12,7 +12,14 @@ version = "2.0.0"
 
 kotlin {
     jvmToolchain(17)
+    compilerOptions {
+        freeCompilerArgs.add("-Xcontext-parameters")
+        freeCompilerArgs.addAll(listOf("-Xrender-internal-diagnostic-names",
+            "-XXLanguage:+NestedTypeAliases"
+        ))
+    }
 }
+
 
 buildscript {
     dependencies {
