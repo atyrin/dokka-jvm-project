@@ -1,5 +1,6 @@
 import org.jetbrains.dokka.gradle.engine.parameters.KotlinPlatform
 import org.jetbrains.dokka.gradle.engine.parameters.VisibilityModifier
+import org.jetbrains.dokka.gradle.engine.plugins.DokkaPluginParametersBaseSpec
 import java.net.URI
 
 plugins {
@@ -13,9 +14,11 @@ version = "2.0.0"
 kotlin {
     jvmToolchain(17)
     compilerOptions {
-        freeCompilerArgs.add("-Xcontext-parameters")
-        freeCompilerArgs.addAll(listOf("-Xrender-internal-diagnostic-names",
-            "-XXLanguage:+NestedTypeAliases"
+        freeCompilerArgs.addAll(
+            listOf(
+                "-Xcontext-parameters",
+                "-Xrender-internal-diagnostic-names",
+                "-XXLanguage:+NestedTypeAliases"
         ))
     }
 }
@@ -45,6 +48,8 @@ dependencies {
 
 
 dokka {
+//    dokkaGeneratorIsolation = ClassLoaderIsolation()
+
     dokkaPublications.html {
         // override output location
         val dokka_output_name: String? by project
@@ -53,6 +58,7 @@ dokka {
         failOnWarning.set(false)
     }
 //    dokkaEngineVersion.set("1.9.20")
+
     dokkaSourceSets {
         configureEach {
             moduleName.set("Dokka JVM Project")
@@ -129,14 +135,15 @@ dokka {
 
     pluginsConfiguration.html {
         customAssets = files("css/homeIcon.svg")
-        customStyleSheets =
-            files(
-                "css/homeIcon.css",
+        customStyleSheets.from("css/homeIcon.css")
+//        customStyleSheets =
+//            files(
+//                "css/homeIcon.css",
 //                "css/logo-styles.css",
 //                "prism.css"
-            )
+//            )
         footerMessage = "Custom Footer Message (tm)"
-        templatesDir = file("templates")
+//        templatesDir = file("templates")
 //            separateInheritedMembers = true
         homepageLink = "https://github.com/Kotlin/dokka" // starting 1.9.20
     }

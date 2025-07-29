@@ -169,3 +169,28 @@ class OverloadWithDifferentDeclarations{
     val me: String = ""
     fun me() {}
 }
+
+/**
+ * Ticket: [issue](https://github.com/Kotlin/dokka/issues/4049)
+ */
+class OverloadWithVarargFunctions{
+    fun overloaded() {}
+    fun overloaded(s: String) {}
+    fun overloaded(vararg s: String) {}
+}
+
+/**
+ * Overload for 2 toplevel functions. This one without vararg
+ * Ticket: [issue](https://github.com/Kotlin/dokka/issues/4049)
+ *
+ * @see [overloadWithVararg]
+ */
+fun overloadWithVararg(novararg: String){}
+
+/**
+ * Overload for 2 toplevel functions. This one with vararg
+ * Ticket: [issue](https://github.com/Kotlin/dokka/issues/4049)
+ *
+ * @see [overloadWithVararg]
+ */
+fun overloadWithVararg(vararg elements: String){}

@@ -1,5 +1,7 @@
 package org.jetbrains.qa.kdoc.resolve
 
+import org.jetbrains.qa.kdoc.resolve.links.PackageLinks
+
 /**
  * Class contains parameters that used in [CrossLinksConsumer]
  * @param propInConstructorWithKDoc some prop but in constructor
@@ -77,5 +79,25 @@ fun String.crossLinksInExtension() {
  * See [CrossLinksSource.InnerClass.innerFunction]
  *
  * See [CrossLinksSource]
+ *
+ * See [CrossLinksSource](CrossLinksSource) local link as external
  */
 class CrossLinksConsumer
+
+
+
+/**
+ * See [CrossLinksSource](CrossLinksSource) local link as external
+ *
+ *
+ * See [PackageLinks](PackageLinks) local link as external
+ */
+class CrossLinksConsumer2(p: PackageLinks)
+
+
+class Ref
+
+/**
+ * Link [Ref](Ref)
+ */
+fun func(){}

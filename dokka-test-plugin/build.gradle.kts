@@ -1,6 +1,7 @@
+import java.net.URL
+
 plugins {
     alias(libs.plugins.kotlin)
-    alias(libs.plugins.dokka)
     `maven-publish`
     signing
 }
@@ -21,34 +22,3 @@ dependencies {
 kotlin {
     jvmToolchain(8)
 }
-
-dokka {
-    dokkaPublications.html{
-        outputDirectory.set(layout.buildDirectory.dir("dokka"))
-    }
-}
-
-val javadocJar by tasks.registering(Jar::class) {
-    archiveClassifier.set("javadoc")
-}
-
-java {
-    withSourcesJar()
-}
-
-publishing {
-    publications {
-        val dokkaTemplatePlugin by creating(MavenPublication::class) {
-            artifactId = project.name
-            from(components["java"])
-            artifact(javadocJar)
-
-            pom {
-                name.set("Dokka template plugin")
-                description.set("This is a plugin template for Dokka")
-                url.set("https://github.com/Kotlin/dokka-plugin-template/")
-            }
-        }
-    }
-}
-

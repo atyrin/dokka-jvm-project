@@ -44,3 +44,5 @@ class ExternalDependnecies {
         }
     }
 }
+
+val a = ExternalDependnecies1()
