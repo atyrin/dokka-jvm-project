@@ -144,7 +144,7 @@ dokka {
 //                "prism.css"
 //            )
         footerMessage = "Custom Footer Message (tm)"
-//        templatesDir = file("templates")
+        templatesDir = file("templates")
 //            separateInheritedMembers = true
         homepageLink = "https://github.com/Kotlin/dokka" // starting 1.9.20
     }
