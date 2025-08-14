@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>MermaidPlugin</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+        if (storage == null) {
+            const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            if (osDarkSchemePreferred === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        } else {
+            const savedDarkMode = JSON.parse(storage)
+            if(savedDarkMode === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../styles/multimodule.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../dokka-mermaid.js" async></script>
+</head>
+<body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+        <div id="leftToggler"><span class="icon-toggler"></span></div>
+        <div class="library-name">
+                <a href="../../../index.html">
+                        <span>Dokka JVM Project</span>
+                </a>
+        </div>
+        <div>
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;-dokka -j-v-m -project/org.jetbrains.qa.kdoc.plugins/-mermaid-plugin/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0">1.8.20</div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+    <div><a href="../../../../../not-found-version.html?v=Current+%282.0.0%29" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">Current (2.0.0)</a></div>
+    <div><a href="../../../../../not-found-version.html?v=1.9.20" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.9.20</a></div>
+    <div><a href="../../../../1.9.10/-dokka -j-v-m -project/org.jetbrains.qa.kdoc.plugins/-mermaid-plugin/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.9.10</a></div>
+    <div><a href="index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.8.20</a></div>
+    <div><a href="../../../../1.8.10/-dokka -j-v-m -project/org.jetbrains.qa.kdoc.plugins/-mermaid-plugin/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option">1.8.10</a></div>
+  </div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div>  📝Template customisation is applied</div>
+        <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/main">jvm</button>
+        </div>
+            <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+            <div id="searchBar"></div>
+        </div>
+    </div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="Dokka JVM Project::org.jetbrains.qa.kdoc.plugins/MermaidPlugin///PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../../index.html">Dokka JVM Project</a><span class="delimiter">/</span><a href="../index.html">org.jetbrains.qa.kdoc.plugins</a><span class="delimiter">/</span><span class="current">MermaidPlugin</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Mermaid</span><wbr><span><span>Plugin</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">MermaidPlugin</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/kotlin/kotlinx.coroutines/tree/master//src/main/kotlin/org/jetbrains/qa/kdoc/rendering/MermaidPlugin.kt#L30">source</a>)</span></span></div><p class="paragraph">See the graph for more details:</p><div class="sample-container"><div id="mermaid-container-5pbghel7m9203"></div></div><script>
+window.addEventListener('load', function() {
+  var graphDef =  `graph LR
+  A[Christmas] -->|Get money| B(Go shopping)
+  B --> C{Let me think}
+  C -->|One| D[Laptop]
+  C -->|Two| E[iPhone]
+  C -->|Three| F[fa:fa-car Car]`;
+  var container = document.getElementById('mermaid-container-5pbghel7m9203');
+  container.innerHTML = '<div id="mermaid-target-5pbghel7m9203"></div>';
+  var cb5pbghel7m9203 = function(svgGraph) {
+    container.innerHTML = svgGraph;
+    // Trick to make the graph takes only the required height.
+    document.getElementById('mermaid-target-5pbghel7m9203').removeAttribute('height')
+  };
+  var updateGraph5pbghel7m9203 = function() {
+    // setTimeout required or else the 1st render could be done before mermaid.initialize() has applied the theme.
+    // Also required because we can't listen to localStorage events reliably, and it's changed on the same click event...
+    setTimeout(() => {
+      var dokkaDarkModeItem = localStorage.getItem("dokka-dark-mode");
+      var isDarkMode = dokkaDarkModeItem ? JSON.parse(dokkaDarkModeItem) : false
+      var theme = 'default';
+      if (isDarkMode === true) {
+        theme = 'dark';
+      }
+      mermaid.initialize({'theme': theme});
+      mermaid.mermaidAPI.render('mermaid-target-5pbghel7m9203', graphDef, cb5pbghel7m9203);
+    }, 0);
+  }
+  updateGraph5pbghel7m9203();
+  
+  var themeToggleButton = document.getElementById('theme-toggle-button');
+  themeToggleButton.addEventListener('click', () => {
+    // This detection mechanism is shitty, please tell me if you know better.
+    updateGraph5pbghel7m9203();
+  });
+});</script><p class="paragraph">another one</p><div class="sample-container"><div id="mermaid-container-71q841rv7dl9u"></div></div><script>
+window.addEventListener('load', function() {
+  var graphDef =  `gantt
+title A Gantt Diagram
+dateFormat YYYY-MM-DD
+section Section
+A task           :a1, 2014-01-01, 30d
+Another task     :after a1 , 20d
+section Another
+Task in sec      :2014-01-12 , 12d
+another task      : 24d`;
+  var container = document.getElementById('mermaid-container-71q841rv7dl9u');
+  container.innerHTML = '<div id="mermaid-target-71q841rv7dl9u"></div>';
+  var cb71q841rv7dl9u = function(svgGraph) {
+    container.innerHTML = svgGraph;
+    // Trick to make the graph takes only the required height.
+    document.getElementById('mermaid-target-71q841rv7dl9u').removeAttribute('height')
+  };
+  var updateGraph71q841rv7dl9u = function() {
+    // setTimeout required or else the 1st render could be done before mermaid.initialize() has applied the theme.
+    // Also required because we can't listen to localStorage events reliably, and it's changed on the same click event...
+    setTimeout(() => {
+      var dokkaDarkModeItem = localStorage.getItem("dokka-dark-mode");
+      var isDarkMode = dokkaDarkModeItem ? JSON.parse(dokkaDarkModeItem) : false
+      var theme = 'default';
+      if (isDarkMode === true) {
+        theme = 'dark';
+      }
+      mermaid.initialize({'theme': theme});
+      mermaid.mermaidAPI.render('mermaid-target-71q841rv7dl9u', graphDef, cb71q841rv7dl9u);
+    }, 0);
+  }
+  updateGraph71q841rv7dl9u();
+  
+  var themeToggleButton = document.getElementById('theme-toggle-button');
+  themeToggleButton.addEventListener('click', () => {
+    // This detection mechanism is shitty, please tell me if you know better.
+    updateGraph71q841rv7dl9u();
+  });
+});</script></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1216350744%2FConstructors%2F769193423" anchor-label="MermaidPlugin" id="-1216350744%2FConstructors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mermaid-plugin.html"><span>Mermaid</span><wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1216350744%2FConstructors%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Stored XSS JVM Only Module</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+

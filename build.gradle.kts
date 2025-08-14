@@ -19,7 +19,8 @@ kotlin {
                 "-Xcontext-parameters",
                 "-Xrender-internal-diagnostic-names",
                 "-XXLanguage:+NestedTypeAliases"
-        ))
+            )
+        )
     }
 }
 
@@ -150,8 +151,8 @@ dokka {
 
 
     pluginsConfiguration.versioning {
-        version = "Current (2.0.0)"
-        versionsOrdering = listOf("Current (2.0.0)", "1.9.20", "1.9.10", "1.8.20", "1.8.10")
+        version = "Current (2.1.0)"
+        versionsOrdering = listOf("Current (2.1.0)", "2.0.0", "1.9.20", "1.9.10", "1.8.20", "1.8.10")
         olderVersionsDir = file("documentation/version")
         renderVersionsNavigationOnAllPages = true
     }
