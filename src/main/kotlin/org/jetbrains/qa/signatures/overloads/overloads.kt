@@ -11,9 +11,25 @@ fun method(){}
 /**
  * Method for overloading with 1 parameter
  * @param p the only [Int] parameter
+ * @return [Unit] returns nothing but
  */
 fun method(p: Int){}
+
+/**
+ * Method for overloading with 1 parameter
+ * @param p the only [Int] parameter
+ * @param p1 the second [Int] parameter
+ * @return [Unit] returns nothing but
+ */
 fun method(p: Int, p1: Int){}
+
+/**
+ * Method for overloading with 2 parameter
+ * @param p the only [Int] parameter
+ * @param p1 the second [Int] parameter
+ * @param p2 the third [Int] parameter
+ * @return [Unit] returns nothing but
+ */
 fun method(p: Int, p1: Int, p2: Int){}
 
 /**

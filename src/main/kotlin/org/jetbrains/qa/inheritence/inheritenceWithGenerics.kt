@@ -44,3 +44,17 @@ class GoodJob : Job<Int>() {
      */
     override fun do3() {}
 }
+
+interface TopLevelInterface<T> {
+    fun toOverrideOnTheMiddle(t: T) = 0
+}
+
+open class MiddleSubclass<T> : TopLevelInterface<T> {
+    override fun toOverrideOnTheMiddle(t: T) = 1
+}
+
+/**
+ * Should have [toOverrideOnTheMiddle] method with `override` keyword. See https://github.com/Kotlin/dokka/issues/3848
+ *
+ */
+class BottomClass<T> : MiddleSubclass<T>()
