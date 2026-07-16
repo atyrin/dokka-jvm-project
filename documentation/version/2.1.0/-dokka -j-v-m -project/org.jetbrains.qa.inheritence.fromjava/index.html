@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>org.jetbrains.qa.inheritence.fromjava</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+        if (storage == null) {
+            const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            if (osDarkSchemePreferred === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        } else {
+            const savedDarkMode = JSON.parse(storage)
+            if (savedDarkMode === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<link href="../../styles/multimodule.css" rel="Stylesheet">
+<link href="../../images/homeIcon.svg">
+<link href="../../styles/homeIcon.css" rel="Stylesheet">
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../index.html" tabindex="1">
+                    Dokka JVM Project
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;-dokka -j-v-m -project/org.jetbrains.qa.inheritence.fromjava/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="2.1.0"><span class="versions-dropdown-button-text">2.1.0</span></div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+<a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.1.0"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">2.1.0</span></a><a href="../../older/2.0.0/-dokka -j-v-m -project/org.jetbrains.qa.inheritence.fromjava/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.0"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.0</span></a><a href="../../not-found-version.html?v=1.9.20" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.9.20"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.9.20</span></a><a href="../../not-found-version.html?v=1.9.10" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.9.10"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.9.10</span></a><a href="../../not-found-version.html?v=1.8.20" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.8.20"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.8.20</span></a><a href="../../not-found-version.html?v=1.8.10" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.8.10"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.8.10</span></a></div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div>Template was modified</div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":/main"
+                                       data-filter=":/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link"
+                   href="https://github.com/Kotlin/dokka"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Dokka JVM Project
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="Dokka JVM Project::org.jetbrains.qa.inheritence.fromjava////PointingToDeclaration//-251573632">
+  <div class="breadcrumbs"><a href="../../index.html">Dokka JVM Project</a><span class="delimiter">/</span><span class="current">org.jetbrains.qa.inheritence.fromjava</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1404358635%2FClasslikes%2F-251573632" anchor-label="ExtensionParentFirst" id="1404358635%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-extension-parent-first/index.html"><span>Extension</span><wbr></wbr><span>Parent</span><wbr></wbr><span><span>First</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1404358635%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-extension-parent-first/index.html">ExtensionParentFirst</a> : <a href="-extension-parent-root/index.html">ExtensionParentRoot</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-451617819%2FClasslikes%2F-251573632" anchor-label="ExtensionParentRoot" id="-451617819%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-extension-parent-root/index.html"><span>Extension</span><wbr></wbr><span>Parent</span><wbr></wbr><span><span>Root</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-451617819%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-extension-parent-root/index.html">ExtensionParentRoot</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2003164397%2FClasslikes%2F-251573632" anchor-label="ExtensionParentSecond" id="-2003164397%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-extension-parent-second/index.html"><span>Extension</span><wbr></wbr><span>Parent</span><wbr></wbr><span><span>Second</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2003164397%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-extension-parent-second/index.html">ExtensionParentSecond</a> : <a href="-extension-parent-first/index.html">ExtensionParentFirst</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2045920508%2FClasslikes%2F-251573632" anchor-label="InheritJavaNested" id="2045920508%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-java-nested/index.html"><span>Inherit</span><wbr></wbr><span>Java</span><wbr></wbr><span><span>Nested</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2045920508%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherit-java-nested/index.html">InheritJavaNested</a> : <a href="../org.jetbrains.qa.java.members/-java-class-with-nested/index.html">JavaClassWithNested</a></div><div class="brief "><p class="paragraph">Inherit a Java class with nested class</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1411323693%2FClasslikes%2F-251573632" anchor-label="InheritJClassAllAccessorForPackagePrivateFieldFinal" id="1411323693%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-all-accessor-for-package-private-field-final/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>All</span><wbr></wbr><span>Accessor</span><wbr></wbr><span>For</span><wbr></wbr><span>Package</span><wbr></wbr><span>Private</span><wbr></wbr><span>Field</span><wbr></wbr><span><span>Final</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1411323693%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-inherit-j-class-all-accessor-for-package-private-field-final/index.html">InheritJClassAllAccessorForPackagePrivateFieldFinal</a> : <a href="../org.jetbrains.qa.java.members/-j-class-all-accessor-for-package-private-field/index.html">JClassAllAccessorForPackagePrivateField</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-416225483%2FClasslikes%2F-251573632" anchor-label="InheritJClassAllAccessorForPackagePrivateFieldOpen" id="-416225483%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-all-accessor-for-package-private-field-open/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>All</span><wbr></wbr><span>Accessor</span><wbr></wbr><span>For</span><wbr></wbr><span>Package</span><wbr></wbr><span>Private</span><wbr></wbr><span>Field</span><wbr></wbr><span><span>Open</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-416225483%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherit-j-class-all-accessor-for-package-private-field-open/index.html">InheritJClassAllAccessorForPackagePrivateFieldOpen</a> : <a href="../org.jetbrains.qa.java.members/-j-class-all-accessor-for-package-private-field/index.html">JClassAllAccessorForPackagePrivateField</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2096575363%2FClasslikes%2F-251573632" anchor-label="InheritJClassAllAccessorForPrivateFieldFinal" id="-2096575363%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-all-accessor-for-private-field-final/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>All</span><wbr></wbr><span>Accessor</span><wbr></wbr><span>For</span><wbr></wbr><span>Private</span><wbr></wbr><span>Field</span><wbr></wbr><span><span>Final</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2096575363%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-inherit-j-class-all-accessor-for-private-field-final/index.html">InheritJClassAllAccessorForPrivateFieldFinal</a> : <a href="../org.jetbrains.qa.java.members/-j-class-all-accessor-for-private-field/index.html">JClassAllAccessorForPrivateField</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1687373797%2FClasslikes%2F-251573632" anchor-label="InheritJClassAllAccessorForPrivateFieldOpen" id="1687373797%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-all-accessor-for-private-field-open/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>All</span><wbr></wbr><span>Accessor</span><wbr></wbr><span>For</span><wbr></wbr><span>Private</span><wbr></wbr><span>Field</span><wbr></wbr><span><span>Open</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1687373797%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherit-j-class-all-accessor-for-private-field-open/index.html">InheritJClassAllAccessorForPrivateFieldOpen</a> : <a href="../org.jetbrains.qa.java.members/-j-class-all-accessor-for-private-field/index.html">JClassAllAccessorForPrivateField</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1293676466%2FClasslikes%2F-251573632" anchor-label="InheritJClassAllAccessorForProtectedFieldFinal" id="1293676466%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-all-accessor-for-protected-field-final/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>All</span><wbr></wbr><span>Accessor</span><wbr></wbr><span>For</span><wbr></wbr><span>Protected</span><wbr></wbr><span>Field</span><wbr></wbr><span><span>Final</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1293676466%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-inherit-j-class-all-accessor-for-protected-field-final/index.html">InheritJClassAllAccessorForProtectedFieldFinal</a> : <a href="../org.jetbrains.qa.java.members/-j-class-all-accessor-for-protected-field/index.html">JClassAllAccessorForProtectedField</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1666946544%2FClasslikes%2F-251573632" anchor-label="InheritJClassAllAccessorForProtectedFieldOpen" id="-1666946544%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-all-accessor-for-protected-field-open/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>All</span><wbr></wbr><span>Accessor</span><wbr></wbr><span>For</span><wbr></wbr><span>Protected</span><wbr></wbr><span>Field</span><wbr></wbr><span><span>Open</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1666946544%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherit-j-class-all-accessor-for-protected-field-open/index.html">InheritJClassAllAccessorForProtectedFieldOpen</a> : <a href="../org.jetbrains.qa.java.members/-j-class-all-accessor-for-protected-field/index.html">JClassAllAccessorForProtectedField</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1472552097%2FClasslikes%2F-251573632" anchor-label="InheritJClassAllAccessorForPublicFieldFinal" id="1472552097%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-all-accessor-for-public-field-final/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>All</span><wbr></wbr><span>Accessor</span><wbr></wbr><span>For</span><wbr></wbr><span>Public</span><wbr></wbr><span>Field</span><wbr></wbr><span><span>Final</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1472552097%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-inherit-j-class-all-accessor-for-public-field-final/index.html">InheritJClassAllAccessorForPublicFieldFinal</a> : <a href="../org.jetbrains.qa.java.members/-j-class-all-accessor-for-public-field/index.html">JClassAllAccessorForPublicField</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1941054273%2FClasslikes%2F-251573632" anchor-label="InheritJClassAllAccessorForPublicFieldOpen" id="1941054273%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-all-accessor-for-public-field-open/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>All</span><wbr></wbr><span>Accessor</span><wbr></wbr><span>For</span><wbr></wbr><span>Public</span><wbr></wbr><span>Field</span><wbr></wbr><span><span>Open</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1941054273%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherit-j-class-all-accessor-for-public-field-open/index.html">InheritJClassAllAccessorForPublicFieldOpen</a> : <a href="../org.jetbrains.qa.java.members/-j-class-all-accessor-for-public-field/index.html">JClassAllAccessorForPublicField</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1569053002%2FClasslikes%2F-251573632" anchor-label="InheritJClassFieldsOnlyFinal" id="1569053002%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-fields-only-final/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>Fields</span><wbr></wbr><span>Only</span><wbr></wbr><span><span>Final</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1569053002%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-inherit-j-class-fields-only-final/index.html">InheritJClassFieldsOnlyFinal</a> : <a href="../org.jetbrains.qa.java.members/-j-class-fields-only/index.html">JClassFieldsOnly</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="420146552%2FClasslikes%2F-251573632" anchor-label="InheritJClassFieldsOnlyOpen" id="420146552%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-fields-only-open/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>Fields</span><wbr></wbr><span>Only</span><wbr></wbr><span><span>Open</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="420146552%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherit-j-class-fields-only-open/index.html">InheritJClassFieldsOnlyOpen</a> : <a href="../org.jetbrains.qa.java.members/-j-class-fields-only/index.html">JClassFieldsOnly</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-636593183%2FClasslikes%2F-251573632" anchor-label="InheritJClassMismatchedGetterAndSetterVisibilityFinal" id="-636593183%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-mismatched-getter-and-setter-visibility-final/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>Mismatched</span><wbr></wbr><span>Getter</span><wbr></wbr><span>And</span><wbr></wbr><span>Setter</span><wbr></wbr><span>Visibility</span><wbr></wbr><span><span>Final</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-636593183%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-inherit-j-class-mismatched-getter-and-setter-visibility-final/index.html">InheritJClassMismatchedGetterAndSetterVisibilityFinal</a> : <a href="../org.jetbrains.qa.java.members/-j-class-mismatched-getter-and-setter-visibility/index.html">JClassMismatchedGetterAndSetterVisibility</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1867760639%2FClasslikes%2F-251573632" anchor-label="InheritJClassMismatchedGetterAndSetterVisibilityOpen" id="-1867760639%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-mismatched-getter-and-setter-visibility-open/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>Mismatched</span><wbr></wbr><span>Getter</span><wbr></wbr><span>And</span><wbr></wbr><span>Setter</span><wbr></wbr><span>Visibility</span><wbr></wbr><span><span>Open</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1867760639%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherit-j-class-mismatched-getter-and-setter-visibility-open/index.html">InheritJClassMismatchedGetterAndSetterVisibilityOpen</a> : <a href="../org.jetbrains.qa.java.members/-j-class-mismatched-getter-and-setter-visibility/index.html">JClassMismatchedGetterAndSetterVisibility</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="697394911%2FClasslikes%2F-251573632" anchor-label="InheritJClassWithGettersOnlyFinal" id="697394911%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-with-getters-only-final/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>With</span><wbr></wbr><span>Getters</span><wbr></wbr><span>Only</span><wbr></wbr><span><span>Final</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="697394911%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-inherit-j-class-with-getters-only-final/index.html">InheritJClassWithGettersOnlyFinal</a> : <a href="../org.jetbrains.qa.java.members/-j-class-with-getters-only/index.html">JClassWithGettersOnly</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1824728765%2FClasslikes%2F-251573632" anchor-label="InheritJClassWithGettersOnlyOpen" id="-1824728765%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-with-getters-only-open/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>With</span><wbr></wbr><span>Getters</span><wbr></wbr><span>Only</span><wbr></wbr><span><span>Open</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1824728765%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherit-j-class-with-getters-only-open/index.html">InheritJClassWithGettersOnlyOpen</a> : <a href="../org.jetbrains.qa.java.members/-j-class-with-getters-only/index.html">JClassWithGettersOnly</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1055692053%2FClasslikes%2F-251573632" anchor-label="InheritJClassWithSettersOnlyFinal" id="-1055692053%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-with-setters-only-final/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>With</span><wbr></wbr><span>Setters</span><wbr></wbr><span>Only</span><wbr></wbr><span><span>Final</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1055692053%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-inherit-j-class-with-setters-only-final/index.html">InheritJClassWithSettersOnlyFinal</a> : <a href="../org.jetbrains.qa.java.members/-j-class-with-setters-only/index.html">JClassWithSettersOnly</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1465637961%2FClasslikes%2F-251573632" anchor-label="InheritJClassWithSettersOnlyOpen" id="-1465637961%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-class-with-setters-only-open/index.html"><span>Inherit</span><wbr></wbr><span>JClass</span><wbr></wbr><span>With</span><wbr></wbr><span>Setters</span><wbr></wbr><span>Only</span><wbr></wbr><span><span>Open</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1465637961%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherit-j-class-with-setters-only-open/index.html">InheritJClassWithSettersOnlyOpen</a> : <a href="../org.jetbrains.qa.java.members/-j-class-with-setters-only/index.html">JClassWithSettersOnly</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="800526809%2FClasslikes%2F-251573632" anchor-label="InheritJEdgeCases" id="800526809%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inherit-j-edge-cases/index.html"><span>Inherit</span><wbr></wbr><span>JEdge</span><wbr></wbr><span><span>Cases</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="800526809%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-inherit-j-edge-cases/index.html">InheritJEdgeCases</a> : <a href="../org.jetbrains.qa.java.members/-j-class-with-edge-cases/index.html">JClassWithEdgeCases</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-127896120%2FClasslikes%2F-251573632" anchor-label="JavaClassToInherit" id="-127896120%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-java-class-to-inherit/index.html"><span>Java</span><wbr></wbr><span>Class</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Inherit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-127896120%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-java-class-to-inherit/index.html">JavaClassToInherit</a></div><div class="brief ">Root package Java class</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1323577707%2FClasslikes%2F-251573632" anchor-label="KotlinChild" id="-1323577707%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kotlin-child/index.html"><span>Kotlin</span><wbr></wbr><span><span>Child</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1323577707%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-kotlin-child/index.html">KotlinChild</a> : <a href="-java-class-to-inherit/index.html">JavaClassToInherit</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="879867073%2FClasslikes%2F-251573632" anchor-label="KotlinCompanionChild" id="879867073%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kotlin-companion-child/index.html"><span>Kotlin</span><wbr></wbr><span>Companion</span><wbr></wbr><span><span>Child</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="879867073%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-kotlin-companion-child/index.html">KotlinCompanionChild</a></div><div class="brief "><p class="paragraph">Kotlin class where companion inherit Java class</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1782740281%2FClasslikes%2F-251573632" anchor-label="KotlinParent" id="-1782740281%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kotlin-parent/index.html"><span>Kotlin</span><wbr></wbr><span><span>Parent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1782740281%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-kotlin-parent/index.html">KotlinParent</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-190750839%2FFunctions%2F-251573632" anchor-label="extensionForJavaClass" id="-190750839%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="extension-for-java-class.html"><span>extension</span><wbr></wbr><span>For</span><wbr></wbr><span>Java</span><wbr></wbr><span><span>Class</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-190750839%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-java-class-to-inherit/index.html">JavaClassToInherit</a><span class="token punctuation">.</span><a href="extension-for-java-class.html"><span class="token function">extensionForJavaClass</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Extension function for <a href="-java-class-to-inherit/index.html">JavaClassToInherit</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-865136772%2FFunctions%2F-251573632" anchor-label="extensionFun" id="-865136772%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="extension-fun.html"><span>extension</span><wbr></wbr><span><span>Fun</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-865136772%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-extension-parent-root/index.html">ExtensionParentRoot</a><span class="token punctuation">.</span><a href="extension-fun.html"><span class="token function">extensionFun</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Extension function for <a href="-extension-parent-root/index.html">ExtensionParentRoot</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Custom Footer Message (tm)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

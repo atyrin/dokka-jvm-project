@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>toArray</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+        if (storage == null) {
+            const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            if (osDarkSchemePreferred === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        } else {
+            const savedDarkMode = JSON.parse(storage)
+            if(savedDarkMode === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../../styles/multimodule.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../dokka-mermaid.js" async></script>
+</head>
+<body>
+<div class="root">
+    <nav class="navigation" id="navigation-wrapper">
+        <div class="navigation--inner">
+            <div class="navigation-title">
+                <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+                <div class="library-name">
+                        <a class="library-name--link" href="../../../index.html">
+                                Dokka JVM Project
+                        </a>
+                </div>
+                <div class="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;-dokka -j-v-m -project/org.jetbrains.qa.java.samples/-collection/to-array.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="1.9.10"><span class="versions-dropdown-button-text">1.9.10</span></div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+<a href="../../../../../-dokka -j-v-m -project/org.jetbrains.qa.java.samples/-collection/to-array.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.1.0"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.1.0</span></a><a href="../../../../2.0.0/-dokka -j-v-m -project/org.jetbrains.qa.java.samples/-collection/to-array.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.0"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.0</span></a><a href="../../../../1.9.20/-dokka -j-v-m -project/org.jetbrains.qa.java.samples/-collection/to-array.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.9.20"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.9.20</span></a><a href="to-array.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.9.10"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">1.9.10</span></a><a href="../../../../1.8.20/-dokka -j-v-m -project/org.jetbrains.qa.java.samples/-collection/to-array.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.8.20"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.8.20</span></a><a href="../../../../1.8.10/-dokka -j-v-m -project/org.jetbrains.qa.java.samples/-collection/to-array.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.8.10"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.8.10</span></a></div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>                </div>
+                <div>  📝Template customisation is applied</div>
+            </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/main">jvm</button>
+        </div>
+        </div>
+        <div class="navigation-controls">
+            <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+            <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+        </div>
+    </nav>
+    <div id="container">
+        <div class="sidebar" id="leftColumn">
+            <div class="sidebar--inner" id="sideMenu"></div>
+        </div>
+        <div id="main">
+<div class="main-content" data-page-type="member" id="content" pageids="Dokka JVM Project::org.jetbrains.qa.java.samples/Collection/toArray/#/PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../../index.html">Dokka JVM Project</a><span class="delimiter">/</span><a href="../index.html">org.jetbrains.qa.java.samples</a><span class="delimiter">/</span><a href="index.html">Collection</a><span class="delimiter">/</span><span class="current">toArray</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>to</span><wbr><span><span>Array</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="to-array.html"><span class="token function">toArray</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://jetbrains.team/p/kqa/repositories/atyrin-test-projects/files/dokka-jvm-project/src/main/java/org/jetbrains/qa/java/samples/Collection.java?tab=source&amp;line=208">source</a>)</span></span></div><p class="paragraph">Returns an array containing all of the elements in this collection. If this collection makes any guarantees as to what order its elements are returned by its iterator, this method must return the elements in the same order. </p><p class="paragraph">The returned array will be "safe" in that no references to it are maintained by this collection. (In other words, this method must allocate a new array even if this collection is backed by an array). The caller is thus free to modify the returned array. </p><p class="paragraph">This method acts as bridge between array-based and collection-based APIs.</p><span class="kdoc-tag"><h4 class="">Return</h4><p class="paragraph">an array containing all of the elements in this collection</p></span><hr><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="to-array.html">T</a><span class="token operator">&gt; </span><a href="to-array.html"><span class="token function">toArray</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">a<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="to-array.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="to-array.html">T</a><span class="token operator">&gt;</span><span class="clearfix"><span class="floating-right">(<a href="https://jetbrains.team/p/kqa/repositories/atyrin-test-projects/files/dokka-jvm-project/src/main/java/org/jetbrains/qa/java/samples/Collection.java?tab=source&amp;line=253">source</a>)</span></span></div><p class="paragraph">Returns an array containing all of the elements in this collection; the runtime type of the returned array is that of the specified array. If the collection fits in the specified array, it is returned therein. Otherwise, a new array is allocated with the runtime type of the specified array and the size of this collection. </p><p class="paragraph">If this collection fits in the specified array with room to spare (i.e., the array has more elements than this collection), the element in the array immediately following the end of the collection is set to <code class="lang-kotlin">null</code>. (This is useful in determining the length of this collection <i>only</i> if the caller knows that this collection does not contain any <code class="lang-kotlin">null</code> elements.) </p><p class="paragraph">If this collection makes any guarantees as to what order its elements are returned by its iterator, this method must return the elements in the same order. </p><p class="paragraph">Like the <a href="to-array.html">toArray</a> method, this method acts as bridge between array-based and collection-based APIs. Further, this method allows precise control over the runtime type of the output array, and may, under certain circumstances, be used to save allocation costs. </p><p class="paragraph">Suppose <code class="lang-kotlin">x</code> is a collection known to contain only strings. The following code can be used to dump the collection into a newly allocated array of <code class="lang-kotlin">String</code>: </p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">String[] y = x.toArray(new String[0]);</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div> Note that <code class="lang-kotlin">toArray(new Object[0])</code> is identical in function to <code class="lang-kotlin">toArray()</code>.<span class="kdoc-tag"><h4 class="">Return</h4><p class="paragraph">an array containing all of the elements in this collection</p></span><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>&lt;T&gt;</span></span></u></div></span></div><div><div class="title"><p class="paragraph">the runtime type of the array to contain the collection</p></div></div></div></div><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>a</span></span></u></div></span></div><div><div class="title"><p class="paragraph">the array into which the elements of this collection are to be stored, if it is big enough; otherwise, a new array of the same runtime type is allocated for this purpose.</p></div></div></div></div></div><h4 class="">Throws</h4><div class="table"><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ArrayStoreException.html"><span>Array</span><wbr><span>Store</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">if the runtime type of the specified array is not a supertype of the runtime type of every element in this collection</p></div></div></div></div><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/NullPointerException.html"><span>Null</span><wbr><span>Pointer</span><wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">if the specified array is null</p></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Stored XSS JVM Only Module</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
