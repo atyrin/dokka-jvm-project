@@ -1,0 +1,235 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>org.jetbrains.qa.typealiases</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+        if (storage == null) {
+            const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            if (osDarkSchemePreferred === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        } else {
+            const savedDarkMode = JSON.parse(storage)
+            if(savedDarkMode === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<link href="../../styles/multimodule.css" rel="Stylesheet">
+<script type="text/javascript" src="../../dokka-mermaid.js" async></script>
+</head>
+<body>
+<div class="root">
+    <nav class="navigation" id="navigation-wrapper">
+        <div class="navigation--inner">
+            <div class="navigation-title">
+                <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+                <div class="library-name">
+                        <a class="library-name--link" href="../../index.html">
+                                Dokka JVM Project
+                        </a>
+                </div>
+                <div class="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;-dokka -j-v-m -project/org.jetbrains.qa.typealiases/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="1.9.10"><span class="versions-dropdown-button-text">1.9.10</span></div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+<a href="../../../../not-found-version.html?v=2.2.0" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.0"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.0</span></a><a href="../../../../not-found-version.html?v=2.1.0" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.1.0"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.1.0</span></a><a href="../../../../not-found-version.html?v=2.0.0" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.0"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.0.0</span></a><a href="../../../1.9.20/-dokka -j-v-m -project/org.jetbrains.qa.typealiases/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.9.20"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.9.20</span></a><a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.9.10"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">1.9.10</span></a><a href="../../../1.8.20/-dokka -j-v-m -project/org.jetbrains.qa.typealiases/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.8.20"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.8.20</span></a><a href="../../../1.8.10/-dokka -j-v-m -project/org.jetbrains.qa.typealiases/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.8.10"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.8.10</span></a></div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>                </div>
+                <div>  📝Template customisation is applied</div>
+            </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/main">jvm</button>
+        </div>
+        </div>
+        <div class="navigation-controls">
+            <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+            <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+        </div>
+    </nav>
+    <div id="container">
+        <div class="sidebar" id="leftColumn">
+            <div class="sidebar--inner" id="sideMenu"></div>
+        </div>
+        <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="Dokka JVM Project::org.jetbrains.qa.typealiases////PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../index.html">Dokka JVM Project</a><span class="delimiter">/</span><span class="current">org.jetbrains.qa.typealiases</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1141236980%2FClasslikes%2F769193423" anchor-label="ClassForUsingInTypeAlias" id="-1141236980%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-class-for-using-in-type-alias/index.html"><span>Class</span><wbr><span>For</span><wbr><span>Using</span><wbr><span>In</span><wbr><span>Type</span><wbr><span><span>Alias</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1141236980%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-class-for-using-in-type-alias/index.html">ClassForUsingInTypeAlias</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">typealias with name <a href="-typealias-to-class/index.html">TypealiasToClass</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="549680627%2FClasslikes%2F769193423" anchor-label="OpenTA" id="549680627%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-t-a/index.html"><span>Open</span><wbr><span><span>TA</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="549680627%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-open-t-a/index.html">OpenTA</a><span class="token operator"> = </span><a href="-open-t-a-class/index.html">OpenTAClass</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1109178711%2FClasslikes%2F769193423" anchor-label="OpenTAClass" id="1109178711%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-t-a-class/index.html"><span>Open</span><wbr><span><span>TAClass</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1109178711%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-open-t-a-class/index.html">OpenTAClass</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1202649955%2FClasslikes%2F769193423" anchor-label="TypealiasToClass" id="1202649955%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-typealias-to-class/index.html"><span>Typealias</span><wbr><span>To</span><wbr><span><span>Class</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1202649955%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-typealias-to-class/index.html">TypealiasToClass</a><span class="token operator"> = </span><a href="-class-for-using-in-type-alias/index.html">ClassForUsingInTypeAlias</a></div><div class="brief "><p class="paragraph">This is a typealias to local class <a href="-class-for-using-in-type-alias/index.html">ClassForUsingInTypeAlias</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1272632306%2FClasslikes%2F769193423" anchor-label="TypealiasToExternalClass" id="-1272632306%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-typealias-to-external-class/index.html"><span>Typealias</span><wbr><span>To</span><wbr><span>External</span><wbr><span><span>Class</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1272632306%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-typealias-to-external-class/index.html">TypealiasToExternalClass</a><span class="token operator"> = </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/BufferedInputStream.html">BufferedInputStream</a></div><div class="brief "><p class="paragraph">Typealias to external class in java stdlib <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/BufferedInputStream.html">java.io.BufferedInputStream</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2110738315%2FClasslikes%2F769193423" anchor-label="TypeAliasToFunctionType" id="-2110738315%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-type-alias-to-function-type/index.html"><span>Type</span><wbr><span>Alias</span><wbr><span>To</span><wbr><span>Function</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2110738315%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-type-alias-to-function-type/index.html">TypeAliasToFunctionType</a><span class="token operator"> = </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">Typealias to functional type <code class="lang-kotlin">(Int, String, Any) -&gt; Unit</code></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="770941052%2FClasslikes%2F769193423" anchor-label="TypeAliasToFunctionTypeWithGeneric" id="770941052%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-type-alias-to-function-type-with-generic/index.html"><span>Type</span><wbr><span>Alias</span><wbr><span>To</span><wbr><span>Function</span><wbr><span>Type</span><wbr><span>With</span><wbr><span><span>Generic</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="770941052%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-type-alias-to-function-type-with-generic/index.html">TypeAliasToFunctionTypeWithGeneric</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-type-alias-to-function-type-with-generic/index.html">T</a><span class="token operator">&gt;</span><span class="token operator"> = </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="-type-alias-to-function-type-with-generic/index.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Typealias to functional type <code class="lang-kotlin">(T) -&gt; Boolean</code></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="695690821%2FClasslikes%2F769193423" anchor-label="TypealiasToInnerClass" id="695690821%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-typealias-to-inner-class/index.html"><span>Typealias</span><wbr><span>To</span><wbr><span>Inner</span><wbr><span><span>Class</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="695690821%2FClasslikes%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-typealias-to-inner-class/index.html">TypealiasToInnerClass</a><span class="token operator"> = </span><a href="-class-for-using-in-type-alias/-inner/index.html">ClassForUsingInTypeAlias.Inner</a></div><div class="brief "><p class="paragraph">This is a typealias to inner class inside local class <a href="-class-for-using-in-type-alias/-inner/index.html">ClassForUsingInTypeAlias.Inner</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1658330840%2FFunctions%2F769193423" anchor-label="x" id="-1658330840%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="x.html"><span><span>x</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1658330840%2FFunctions%2F769193423"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-open-t-a/index.html">OpenTA</a><span class="token punctuation">.</span><a href="x.html"><span class="token function">x</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Stored XSS JVM Only Module</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

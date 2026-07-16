@@ -1,0 +1,416 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AliasHolder</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<script type="text/javascript" src="../../../dokka-mermaid.js" async></script>
+<link href="../../../styles/multimodule.css" rel="Stylesheet">
+<link href="../../../images/homeIcon.svg">
+<link href="../../../styles/homeIcon.css" rel="Stylesheet">
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    Dokka JVM Project
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+<dokka-template-command data="{&quot;@class&quot;:&quot;org.jetbrains.dokka.base.templating.ReplaceVersionsCommand&quot;,&quot;location&quot;:&quot;-dokka -j-v-m -project/org.jetbrains.qa.langfeatures.typealiases.nested/-alias-holder/index.html&quot;}"><div class="dropdown versions-dropdown" data-role="dropdown">
+  <div class="button button_dropdown versions-dropdown-button" role="combobox" data-role="dropdown-toggle" aria-controls="versions-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Select version" tabindex="0" title="2.0.0"><span class="versions-dropdown-button-text">2.0.0</span></div>
+  <div class="dropdown--list dropdown--list_positioned_left versions-dropdown-data" role="listbox" data-role="dropdown-listbox" aria-label="Versions" id="versions-listbox">
+    <div class="dropdown--header" data-remove-style="true" style="display: none"><span>Select version</span><button class="button" data-role="dropdown-toggle" aria-label="Close versions selection"><i class="ui-kit-icon ui-kit-icon_cross"></i></button></div>
+<a href="../../../../../-dokka -j-v-m -project/org.jetbrains.qa.langfeatures.typealiases.nested/-alias-holder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.2.0"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.2.0</span></a><a href="../../../../2.1.0/-dokka -j-v-m -project/org.jetbrains.qa.langfeatures.typealiases.nested/-alias-holder/index.html" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.1.0"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">2.1.0</span></a><a href="index.html" class="dropdown--option dropdown--option_active dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="2.0.0"><span class="dropdown--option-icon dropdown--option-icon_selected"></span><span class="dropdown--option-text">2.0.0</span></a><a href="../../../../../not-found-version.html?v=1.9.20" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.9.20"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.9.20</span></a><a href="../../../../../not-found-version.html?v=1.9.10" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.9.10"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.9.10</span></a><a href="../../../../../not-found-version.html?v=1.8.20" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.8.20"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.8.20</span></a><a href="../../../../../not-found-version.html?v=1.8.10" class="dropdown--option dropdown--option-link" style="display: block; padding: 5px; color: #fff" data-remove-style="true" role="option" title="1.8.10"><span class="dropdown--option-icon"></span><span class="dropdown--option-text">1.8.10</span></a></div>
+  <div class="dropdown--overlay"></div>
+</div>
+</dokka-template-command>        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":/main" data-filter=":/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+                <a class="navigation-controls--btn navigation-controls--btn_homepage" id="homepage-link" href="https://github.com/Kotlin/dokka"></a>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Dokka JVM Project
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="Dokka JVM Project::org.jetbrains.qa.langfeatures.typealiases.nested/AliasHolder///PointingToDeclaration//-251573632">
+  <div class="breadcrumbs"><a href="../../../index.html">Dokka JVM Project</a><span class="delimiter">/</span><a href="../index.html">org.jetbrains.qa.langfeatures.typealiases.nested</a><span class="delimiter">/</span><span class="current">AliasHolder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Alias</span><wbr><span><span>Holder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">AliasHolder</a><span class="clearfix"><span class="floating-right">(<a href="https://jetbrains.team/p/kqa/repositories/dokka-jvm-project/files/src/main/kotlin/org/jetbrains/qa/langfeatures/typealiases/nested/nested-TA-clash-resolution.kt?tab=source&amp;line=7">source</a>)</span></span></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-sub-alias-holder/index.html">SubAliasHolder</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1147598181%2FConstructors%2F-251573632" anchor-label="AliasHolder" id="-1147598181%2FConstructors%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-alias-holder.html"><span>Alias</span><wbr><span><span>Holder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1147598181%2FConstructors%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="667398996%2FClasslikes%2F-251573632" anchor-label="Inner" id="667398996%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inner/index.html"><span><span>Inner</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="667398996%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">inner </span><span class="token keyword">class </span><a href="-inner/index.html">Inner</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1739566258%2FClasslikes%2F-251573632" anchor-label="InnerAliasHolder" id="1739566258%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inner-alias-holder/index.html"><span>Inner</span><wbr><span>Alias</span><wbr><span><span>Holder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1739566258%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">inner </span><span class="token keyword">class </span><a href="-inner-alias-holder/index.html">InnerAliasHolder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="348651905%2FClasslikes%2F-251573632" anchor-label="Nested" id="348651905%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-nested/index.html"><span><span>Nested</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="348651905%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-nested/index.html">Nested</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-716394395%2FClasslikes%2F-251573632" anchor-label="NestedAliasHolder" id="-716394395%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-nested-alias-holder/index.html"><span>Nested</span><wbr><span>Alias</span><wbr><span><span>Holder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-716394395%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-nested-alias-holder/index.html">NestedAliasHolder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-678596947%2FClasslikes%2F-251573632" anchor-label="ObjectAliasHolder" id="-678596947%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-object-alias-holder/index.html"><span>Object</span><wbr><span>Alias</span><wbr><span><span>Holder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-678596947%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-object-alias-holder/index.html">ObjectAliasHolder</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-152974114%2FProperties%2F-251573632" anchor-label="propOfAliasToInner" id="-152974114%2FProperties%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prop-of-alias-to-inner.html"><span>prop</span><wbr><span>Of</span><wbr><span>Alias</span><wbr><span>To</span><wbr><span><span>Inner</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-152974114%2FProperties%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="prop-of-alias-to-inner.html">propOfAliasToInner</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.qa.langfeatures.typealiases.nested/AliasHolder.AliasToInner///PointingToDeclaration/">AliasHolder.AliasToInner</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1960705329%2FProperties%2F-251573632" anchor-label="propOfAliasToNested" id="-1960705329%2FProperties%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prop-of-alias-to-nested.html"><span>prop</span><wbr><span>Of</span><wbr><span>Alias</span><wbr><span>To</span><wbr><span><span>Nested</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1960705329%2FProperties%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="prop-of-alias-to-nested.html">propOfAliasToNested</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.qa.langfeatures.typealiases.nested/AliasHolder.AliasToNested///PointingToDeclaration/">AliasHolder.AliasToNested</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1631108107%2FProperties%2F-251573632" anchor-label="propOfAliasToTopLevelClass" id="1631108107%2FProperties%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prop-of-alias-to-top-level-class.html"><span>prop</span><wbr><span>Of</span><wbr><span>Alias</span><wbr><span>To</span><wbr><span>Top</span><wbr><span>Level</span><wbr><span><span>Class</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1631108107%2FProperties%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="prop-of-alias-to-top-level-class.html">propOfAliasToTopLevelClass</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.qa.langfeatures.typealiases.nested/AliasHolder.AliasToTopLevelClass///PointingToDeclaration/">AliasHolder.AliasToTopLevelClass</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2084856242%2FProperties%2F-251573632" anchor-label="propOfInaccessibleAliasFromInner" id="2084856242%2FProperties%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prop-of-inaccessible-alias-from-inner.html"><span>prop</span><wbr><span>Of</span><wbr><span>Inaccessible</span><wbr><span>Alias</span><wbr><span>From</span><wbr><span><span>Inner</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2084856242%2FProperties%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="prop-of-inaccessible-alias-from-inner.html">propOfInaccessibleAliasFromInner</a><span class="token operator">: </span><a href="../-alias-to-top-level-class-inside-inner/index.html">AliasToTopLevelClassInsideInner</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1307441029%2FProperties%2F-251573632" anchor-label="propOfInaccessibleAliasFromNested" id="-1307441029%2FProperties%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prop-of-inaccessible-alias-from-nested.html"><span>prop</span><wbr><span>Of</span><wbr><span>Inaccessible</span><wbr><span>Alias</span><wbr><span>From</span><wbr><span><span>Nested</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1307441029%2FProperties%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="prop-of-inaccessible-alias-from-nested.html">propOfInaccessibleAliasFromNested</a><span class="token operator">: </span><a href="../-alias-to-top-level-class-inside-nested/index.html">AliasToTopLevelClassInsideNested</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-539400397%2FProperties%2F-251573632" anchor-label="propOfInaccessibleAliasFromObject" id="-539400397%2FProperties%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prop-of-inaccessible-alias-from-object.html"><span>prop</span><wbr><span>Of</span><wbr><span>Inaccessible</span><wbr><span>Alias</span><wbr><span>From</span><wbr><span><span>Object</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-539400397%2FProperties%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="prop-of-inaccessible-alias-from-object.html">propOfInaccessibleAliasFromObject</a><span class="token operator">: </span><a href="../-alias-to-top-level-class-inside-object/index.html">AliasToTopLevelClassInsideObject</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2040734269%2FProperties%2F-251573632" anchor-label="propOfPrivateAliasToInner" id="-2040734269%2FProperties%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prop-of-private-alias-to-inner.html"><span>prop</span><wbr><span>Of</span><wbr><span>Private</span><wbr><span>Alias</span><wbr><span>To</span><wbr><span><span>Inner</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2040734269%2FProperties%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="prop-of-private-alias-to-inner.html">propOfPrivateAliasToInner</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.qa.langfeatures.typealiases.nested/AliasHolder.PrivateAliasToInner///PointingToDeclaration/">AliasHolder.PrivateAliasToInner</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-351727990%2FProperties%2F-251573632" anchor-label="propOfPrivateAliasToNested" id="-351727990%2FProperties%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prop-of-private-alias-to-nested.html"><span>prop</span><wbr><span>Of</span><wbr><span>Private</span><wbr><span>Alias</span><wbr><span>To</span><wbr><span><span>Nested</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-351727990%2FProperties%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="prop-of-private-alias-to-nested.html">propOfPrivateAliasToNested</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.qa.langfeatures.typealiases.nested/AliasHolder.PrivateAliasToNested///PointingToDeclaration/">AliasHolder.PrivateAliasToNested</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="769333232%2FProperties%2F-251573632" anchor-label="propOfPrivateAliasToTopLevelClass" id="769333232%2FProperties%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prop-of-private-alias-to-top-level-class.html"><span>prop</span><wbr><span>Of</span><wbr><span>Private</span><wbr><span>Alias</span><wbr><span>To</span><wbr><span>Top</span><wbr><span>Level</span><wbr><span><span>Class</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="769333232%2FProperties%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="prop-of-private-alias-to-top-level-class.html">propOfPrivateAliasToTopLevelClass</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.qa.langfeatures.typealiases.nested/AliasHolder.PrivateAliasToTopLevelClass///PointingToDeclaration/">AliasHolder.PrivateAliasToTopLevelClass</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1284903288%2FProperties%2F-251573632" anchor-label="propOfProtectedAliasToInner" id="1284903288%2FProperties%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prop-of-protected-alias-to-inner.html"><span>prop</span><wbr><span>Of</span><wbr><span>Protected</span><wbr><span>Alias</span><wbr><span>To</span><wbr><span><span>Inner</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1284903288%2FProperties%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="prop-of-protected-alias-to-inner.html">propOfProtectedAliasToInner</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.qa.langfeatures.typealiases.nested/AliasHolder.ProtectedAliasToInner///PointingToDeclaration/">AliasHolder.ProtectedAliasToInner</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-336178827%2FProperties%2F-251573632" anchor-label="propOfProtectedAliasToNested" id="-336178827%2FProperties%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prop-of-protected-alias-to-nested.html"><span>prop</span><wbr><span>Of</span><wbr><span>Protected</span><wbr><span>Alias</span><wbr><span>To</span><wbr><span><span>Nested</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-336178827%2FProperties%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="prop-of-protected-alias-to-nested.html">propOfProtectedAliasToNested</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.qa.langfeatures.typealiases.nested/AliasHolder.ProtectedAliasToNested///PointingToDeclaration/">AliasHolder.ProtectedAliasToNested</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="563332773%2FProperties%2F-251573632" anchor-label="propOfProtectedAliasToTopLevelClass" id="563332773%2FProperties%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prop-of-protected-alias-to-top-level-class.html"><span>prop</span><wbr><span>Of</span><wbr><span>Protected</span><wbr><span>Alias</span><wbr><span>To</span><wbr><span>Top</span><wbr><span>Level</span><wbr><span><span>Class</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="563332773%2FProperties%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">var </span><a href="prop-of-protected-alias-to-top-level-class.html">propOfProtectedAliasToTopLevelClass</a><span class="token operator">: </span><span data-unresolved-link="org.jetbrains.qa.langfeatures.typealiases.nested/AliasHolder.ProtectedAliasToTopLevelClass///PointingToDeclaration/">AliasHolder.ProtectedAliasToTopLevelClass</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Custom Footer Message (tm)</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
