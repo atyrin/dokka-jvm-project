@@ -1,3 +1,7 @@
 .navigation-controls--homepage {
     background-image: url("../images/homeIcon.svg");
 }
+
+.navigation-controls--btn_homepage {
+    background-image: url("../images/homeIcon.svg");
+}

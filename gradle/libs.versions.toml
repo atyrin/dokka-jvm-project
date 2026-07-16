@@ -1,7 +1,7 @@
 [versions]
-#dokka = "2.0.0"
-dokka = "2.1.0-Beta"
-kotlin = "2.2.20-RC2"
+dokka = "2.2.0"
+#dokka = "2.3.0-dev-431"
+kotlin = "2.4.0"
 ktor = "3.2.2"
 http4k = "5.13.2.0"
 
@@ -12,6 +12,7 @@ dokka-versioning = { module = "org.jetbrains.dokka:versioning-plugin", version.r
 dokka-analysis-kotlin = { module = "org.jetbrains.dokka:analysis-kotlin-api", version.ref = "dokka" }
 dokka-javadoc = { module = "org.jetbrains.dokka:javadoc-plugin", version.ref = "dokka" }
 dokka-kotlin-as-java = { module = "org.jetbrains.dokka:kotlin-as-java-plugin", version.ref = "dokka" }
+dokka-gfm = { module = "org.jetbrains.dokka:gfm-plugin", version.ref = "dokka" }
 dokka-test-api = { module = "org.jetbrains.dokka:dokka-test-api", version.ref = "dokka" }
 dokka-base-test-utils = { module = "org.jetbrains.dokka:dokka-base-test-utils", version.ref = "dokka" }
 

@@ -1,6 +1,8 @@
 import org.jetbrains.dokka.gradle.engine.parameters.KotlinPlatform
 import org.jetbrains.dokka.gradle.engine.parameters.VisibilityModifier
 import org.jetbrains.dokka.gradle.engine.plugins.DokkaPluginParametersBaseSpec
+import org.jetbrains.dokka.gradle.formats.DokkaFormatPlugin
+import org.jetbrains.dokka.gradle.internal.InternalDokkaGradlePluginApi
 import java.net.URI
 
 plugins {
@@ -9,7 +11,7 @@ plugins {
 }
 
 group = "org.jetbrains.qa"
-version = "2.0.0"
+version = "2.3.0"
 
 kotlin {
     jvmToolchain(17)
@@ -40,11 +42,14 @@ dependencies {
     implementation(libs.bundles.external)
 
     dokkaHtmlPlugin(libs.dokka.versioning)
-    dokkaHtmlPlugin(libs.dokka.mermaid)
+//    dokkaHtmlPlugin(libs.dokka.mermaid)
 //    dokkaHtmlPlugin(libs.dokka.javadoc)
 //    dokkaHtmlPlugin(libs.dokka.kotlin.`as`.java)
+//    dokkaPlugin("org.jetbrains.dokka:gfm-plugin:2.1.0")
 
     dokkaHtmlPlugin("org.jetbrains.qa:dokka-test-plugin")
+    dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-playground-samples-plugin")
+
 }
 
 
@@ -144,16 +149,40 @@ dokka {
 //                "prism.css"
 //            )
         footerMessage = "Custom Footer Message (tm)"
-        templatesDir = file("templates")
+//        templatesDir = file("templates")
 //            separateInheritedMembers = true
         homepageLink = "https://github.com/Kotlin/dokka" // starting 1.9.20
     }
 
-
     pluginsConfiguration.versioning {
-        version = "Current (2.1.0)"
-        versionsOrdering = listOf("Current (2.1.0)", "2.0.0", "1.9.20", "1.9.10", "1.8.20", "1.8.10")
+        version = "2.3.0"
+        versionsOrdering = listOf(
+            "2.3.0",
+            "2.2.0",
+            "2.1.0", "2.0.0", "1.9.20", "1.9.10", "1.8.20", "1.8.10"
+        )
         olderVersionsDir = file("documentation/version")
         renderVersionsNavigationOnAllPages = true
     }
+
+    pluginsConfiguration.kotlinPlaygroundSamples {
+        this.kotlinPlaygroundScript.set("https://script.url")
+//        this.kotlinPlaygroundServer.set("https://my-kotlin-playground-server")
+    }
 }
+
+
+//@OptIn(InternalDokkaGradlePluginApi::class)
+//abstract class DokkaMarkdownPlugin : DokkaFormatPlugin(formatName = "markdown") {
+//    override fun DokkaFormatPlugin.DokkaFormatPluginContext.configure() {
+//        project.dependencies {
+//            // Sets up current project generation
+//            dokkaPlugin(dokka("gfm-plugin"))
+//
+//            // Sets up multimodule generation
+//            formatDependencies.dokkaPublicationPluginClasspathApiOnly.dependencies.addLater(
+//                dokka("gfm-template-processing-plugin")
+//            )
+//        }
+//    }
+//}
