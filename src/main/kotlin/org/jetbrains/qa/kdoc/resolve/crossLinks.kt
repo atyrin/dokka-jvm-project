@@ -34,10 +34,10 @@ class CrossLinksSource(
 
 
 /**
- * Description has links to parameters of another class @see [CrossLinksSource.param] (unresolves as param)
+ * Description has links to parameters of another class @see CrossLinksSource.param (unresolves as param)
  * [Link With alias to prop][CrossLinksSource.property]
  * [FQN Link With alias to prop][org.jetbrains.qa.kdoc.resolve.CrossLinksSource.property]
- *  see [CrossLinksSource.paramWithKDoc] (unresolves as param)
+ *  see CrossLinksSource.paramWithKDoc (unresolves as param)
  *  see [CrossLinksSource.internalPropInConstructorWithKDoc]
  *  See [CrossLinksSource.internalPropInConstructor]
  *  See [CrossLinksSource.propInConstructor]
@@ -55,7 +55,7 @@ class CrossLinksSource(
  *
  *  See [CrossLinksSource]
 
- * @see [CrossLinksSource.paramWithKDoc] unresolves as param
+ * @see CrossLinksSource .paramWithKDoc unresolves as param
  * @see [CrossLinksSource.internalPropInConstructorWithKDoc] resolved
  */
 fun String.crossLinksInExtension() {
@@ -63,8 +63,8 @@ fun String.crossLinksInExtension() {
 
 /**
  * Description has a links to parameters of another class
- * See [CrossLinksSource.param]
- * See [CrossLinksSource.paramWithKDoc]
+ * See CrossLinksSource.param
+ * See CrossLinksSource.paramWithKDoc
  * See [CrossLinksSource.internalPropInConstructorWithKDoc]
  * See [CrossLinksSource.internalPropInConstructor]
  * See [CrossLinksSource.propInConstructor]

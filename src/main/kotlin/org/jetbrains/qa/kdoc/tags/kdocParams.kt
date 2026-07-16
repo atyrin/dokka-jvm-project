@@ -11,7 +11,7 @@ import java.io.StringReader
  * @see [org.jetbrains.qa.kdoc.rendering.edgecases.LongPackageName] some comment 01
  * @see [org.jetbrains.qa.kdoc.rendering.edgecases.LongPackageName] some comment 02
  * @see [org.jetbrains.qa.kdoc.rendering.edgecases.LongPackageName] some comment 03
- * @see [MyExternalLink](http://google.com)
+ * @see [org.jetbrains.qa.kdoc.rendering.edgecases.LongPackageName] text with [MyExternalLink](http://google.com)
  */
 class ClassWithLongSeeAlsoList(val propInPrimaryConstructor: String) {
 
@@ -46,7 +46,6 @@ class ClassWithLongSeeAlsoList(val propInPrimaryConstructor: String) {
 
 
 /**
- * Adds a [a] to this group.
  * @since 1.1
  * @suppress
  */

@@ -37,3 +37,16 @@ class BasicTAContainer {
     typealias AliasToFunctionalType = (Int) -> Boolean
     typealias AliasToFunctionalTypeWithGeneric<T> = (T) -> Boolean
 }
+
+
+/**
+ * References to nested type aliases from [BasicTAContainer]:
+ * * [BasicTAContainer.AliasToTopLevelClass] AliasToTopLevelClass
+ * * [BasicTAContainer.AliasToNested] AliasToNested
+ * * [BasicTAContainer.AliasToInner] AliasToInner
+ * * [BasicTAContainer.AliasToObject] AliasToObject
+ * * [BasicTAContainer.AliasToCompanion] AliasToCompanion
+ * * [BasicTAContainer.AliasToFunctionalType] AliasToFunctionalType
+ * * [BasicTAContainer.AliasToFunctionalTypeWithGeneric] AliasToFunctionalTypeWithGeneric
+ */
+fun referencesToNestedTypeAliasesInBasicTAContainer() {}

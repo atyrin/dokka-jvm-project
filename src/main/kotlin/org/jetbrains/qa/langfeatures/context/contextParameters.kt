@@ -22,5 +22,11 @@ class DbUserService(val logger: Logger, val connection: DbConnection): UserServi
     companion object {
         context(logger: Logger, connection: DbConnection)
         operator fun invoke(): DbUserService = DbUserService(logger, connection)
+
+        context(i1: Int, i2: Int, i3: Int, i4: Int, i5: Int, i6: Int, i7: Int, i8: Int, i9: Int, i10: Int)
+        fun funWithLongContextList(){}
+
+        context(i1: Int, i2: Int, i3: Int, i4: Int, i5: Int, i6: Int, i7: Int, i8: Int, i9: Int, i10: Int)
+        fun funWithLongContextListWithParams(j1: String, j2: String, j3: String, j4: String, j5: String, j6: String, j7: String, j8: String, j9: String, j10: String){}
     }
 }

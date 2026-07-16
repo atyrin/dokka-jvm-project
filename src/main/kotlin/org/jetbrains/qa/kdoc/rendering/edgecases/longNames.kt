@@ -19,7 +19,7 @@ class LongPackageName {
 class LongPackageNameAndEvenMoreLongClassNameInCamelCase {
     val LONG_PACKAGE_NAME_AND_EVEN_MORE_LONG_CLASS_NAME: Int = 0
     /**
-     * @org.jetbrains.qa.kdoc.rendering.sample [sample]
+     * [org.jetbrains.qa.kdoc.rendering.samples.sampleBase]
      */
     fun methodInTheClassWithCamelCaseWithSample(){
     }
@@ -31,7 +31,7 @@ class LongPackageNameAndEvenMoreLongClassNameInCamelCase {
  */
 class LONG_PACKAGE_NAME_AND_EVEN_MORE_LONG_CLASS_NAME {
     /**
-     * @org.jetbrains.qa.kdoc.rendering.sample [sample]
+     * @org.jetbrains.qa.kdoc.rendering.sample [org.jetbrains.qa.kdoc.rendering.samples.sampleBase]
      */
     fun methodInTheClassWithCamelCaseWithSample(){
     }

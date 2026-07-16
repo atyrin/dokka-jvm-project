@@ -14,7 +14,18 @@ open class AliasHolder {
     protected typealias ProtectedAliasToNested = Nested
     private typealias PrivateAliasToNested = Nested
 
-    inner class Inner
+    inner class Inner{
+        val innerProp: Int = 0
+        fun innerMethod(){}
+    }
+
+
+    /**
+     * Call to value ([Inner]) properties
+     *
+     * [innerProp] - same issue https://github.com/Kotlin/dokka/issues/3521
+     * [innerMethod] - same issue https://github.com/Kotlin/dokka/issues/3521
+     */
     typealias AliasToInner = Inner
     protected typealias ProtectedAliasToInner = Inner
     private typealias PrivateAliasToInner = Inner
@@ -74,6 +85,13 @@ open class AliasHolder {
     }
 
     object ObjectAliasHolder {
+        /**
+         * References to properties from TA
+         *
+         * [propOfOwnTypeAlias] - same level property
+         * [AliasToUpperLevelNestedAlias] - same level nested typealias
+         * [AliasToTopLevelClass] - upper level typealias
+         */
         typealias AliasToTopLevelClassInsideObject = TopLevelClass
         typealias AliasToUpperLevelNestedAlias = AliasToTopLevelClass
 
@@ -94,6 +112,8 @@ open class AliasHolder {
 }
 
 class SubAliasHolder: AliasHolder() {
+
+    typealias AliasToPortectedParentTypealias = ProtectedAliasToTopLevelClass
     override var propOfAliasToTopLevelClass: AliasToTopLevelClass = AliasHolder.AliasToTopLevelClass()
     override var propOfProtectedAliasToTopLevelClass: ProtectedAliasToTopLevelClass = AliasHolder.ProtectedAliasToTopLevelClass()
 
@@ -111,6 +131,10 @@ class SubAliasHolder: AliasHolder() {
 
 typealias AliasToTopLevelClassInsideNested = AliasHolder.NestedAliasHolder.AliasToTopLevelClassInsideNested
 typealias AliasToTopLevelClassInsideInner = AliasHolder.InnerAliasHolder.AliasToTopLevelClassInsideInner
+
+/**
+ * clash with name of nested TA [AliasToTopLevelClassInsideObject]
+ */
 typealias AliasToTopLevelClassInsideObject = AliasHolder.ObjectAliasHolder.AliasToTopLevelClassInsideObject
 
 /**
@@ -126,3 +150,12 @@ class TaToTaContainer {
     typealias ListTA<T> = List<T>
     typealias ListOfNestedTA = ListTA<Nested>
 }
+
+/**
+ * * [AliasToTopLevelClassInsideNested] AliasToTopLevelClassInsideNested
+ * * [AliasToTopLevelClassInsideInner] AliasToTopLevelClassInsideInner
+ *
+ * * [AliasHolder.NestedAliasHolder.AliasToTopLevelClassInsideNested] AliasToTopLevelClassInsideNested
+ * * [AliasHolder.NestedAliasHolder.AliasToUpperLevelNestedAlias] AliasToUpperLevelNestedAlias
+ */
+fun referencesToNestedTypeAliasesInTaToTaContainer() {}
