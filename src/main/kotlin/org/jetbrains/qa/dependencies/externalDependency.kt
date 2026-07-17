@@ -45,4 +45,7 @@ class ExternalDependnecies {
     }
 }
 
+/**
+ * Usersolved reference to [ExternalDependnecies1]
+ */
 val a = ExternalDependnecies1()

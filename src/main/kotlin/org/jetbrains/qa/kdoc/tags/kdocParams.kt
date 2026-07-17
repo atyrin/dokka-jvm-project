@@ -77,7 +77,7 @@ fun allKDocTagsFun(param: Int): Int {
  * @ex ception Exception Here is an `@exception` param
  * @see  [java.io.StringReader] just see it
  * @see  [java.io.StringReader.TRANSFER_BUFFER_SIZE] just see it as well
- * @param [param] integer param
+ * @param [unresolvedParamInProperty] integer param
  * @return [Int] exactly the same as param divided by 2
  * @sample [org.jetbrains.qa.kdoc.rendering.samples.sampleBase] sample function
  */
@@ -111,7 +111,7 @@ fun String.allKDocTagsExtension(paramInt: Int, paramStr: String): Int {
  * @throws Exception on NRE `@throws` param
  * @ex ception Exception Here is an `@exception` param
  * @see  [java.io.StringReader] copypasted
- * @param [param] integer param
+ * @param [unresolvedParamInExtensionProperty] integer param
  * @return [Int] exactly the same as param divided by 2
  * @sample [org.jetbrains.qa.kdoc.rendering.samples.sampleBase] sample function
  * @receiver String so, the receiver function. This function somehow extent it and add more functionality bla-bla-bla
@@ -195,7 +195,7 @@ class AllKDocTagsClass(paramInt: Int, paramStr: String = "100") {
      * @throws Exception on NRE `@throws` param
      * @exception Exception Here is an `@exception` param
      * @see  [java.io.StringReader] some java class
-     * @param there is no params
+     * @param textAfterParamThatIsNotParamUnresolved
      * @property [COMPANION_PROPERTY_VAR] property of the companion object described in companion kdoc
      * @return [Int] exactly the same as param divided by 2
      * @sample [org.jetbrains.qa.kdoc.rendering.samples.sampleBase] sample function
@@ -226,13 +226,23 @@ class AllKDocTagsClass(paramInt: Int, paramStr: String = "100") {
      * @throws Exception on NRE `@throws` param
      * @exception Exception Here is an `@exception` param
      * @see  [java.io.StringReader] copypasted
-     * @param [param] integer param
      * @return [Int] exactly the same as param divided by 2
      * @sample [org.jetbrains.qa.kdoc.rendering.samples.sampleBase] sample function
      */
     fun funWithoutParam() {}
 
 
+    /**
+     * Function inside [AllKDocTagsClass]
+     * @since 1.7
+     * @author David Blaine
+     * @throws Exception on NRE `@throws` param
+     * @exception Exception Here is an `@exception` param
+     * @see  [java.io.StringReader] copypasted
+     * @param [p] integer param
+     * @return [Int] exactly the same as param divided by 2
+     * @sample [org.jetbrains.qa.kdoc.rendering.samples.sampleBase] sample function
+     */
     fun funWithoutParam(p: Any): Nothing {
         TODO()
     }

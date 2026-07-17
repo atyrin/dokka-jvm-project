@@ -20,8 +20,8 @@ class ClassKDocLocation(param: String) {
 /**
  * Class with params tag. But there are no params.
  * // not rendered with K2 on constructors page https://github.com/Kotlin/dokka/issues/3348
- * @param [paramInt] integer param
- * @param [paramStr] string param
+ * @param [nonExistingParamInt] integer param
+ * @param [nonExistingParamStr] string param
  */
 class ClassWithNonExistingParams
 
