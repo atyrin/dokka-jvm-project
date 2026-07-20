@@ -20,7 +20,8 @@ kotlin {
             listOf(
                 "-Xcontext-parameters",
                 "-Xrender-internal-diagnostic-names",
-                "-XXLanguage:+NestedTypeAliases"
+                "-XXLanguage:+NestedTypeAliases",
+                "-Xcompanion-blocks-and-extensions"
             )
         )
     }
