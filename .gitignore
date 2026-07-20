@@ -203,3 +203,4 @@ dkms.conf
 
 *.podspec
 .DS_Store
+/.kotlin/
