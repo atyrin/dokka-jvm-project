@@ -1,4 +1,3 @@
-import org.jetbrains.dokka.gradle.engine.parameters.KotlinPlatform
 import org.jetbrains.dokka.gradle.engine.parameters.VisibilityModifier
 import org.jetbrains.dokka.gradle.engine.plugins.DokkaPluginParametersBaseSpec
 import org.jetbrains.dokka.gradle.formats.DokkaFormatPlugin
@@ -125,8 +124,8 @@ dokka {
             // add (sources) to the signature line and navigate to sources
             sourceLink {
                 localDirectory.set(projectDir.resolve("src"))
-                remoteUrl.set(URI("https://jetbrains.team/p/kqa/repositories/dokka-jvm-project/files/src"))
-                remoteLineSuffix.set("?tab=source&line=")
+                remoteUrl.set(URI("https://github.com/atyrin/dokka-jvm-project/blob/master/src"))
+                remoteLineSuffix.set("#L")
             }
 
             externalDocumentationLinks {
@@ -143,12 +142,6 @@ dokka {
     pluginsConfiguration.html {
         customAssets = files("css/homeIcon.svg")
         customStyleSheets.from("css/homeIcon.css")
-//        customStyleSheets =
-//            files(
-//                "css/homeIcon.css",
-//                "css/logo-styles.css",
-//                "prism.css"
-//            )
         footerMessage = "Custom Footer Message (tm)"
 //        templatesDir = file("templates")
 //            separateInheritedMembers = true
