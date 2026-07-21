@@ -1,6 +1,8 @@
 package org.jetbrains.qa.langfeatures.companion.block
 
-
+/**
+ * Companion block properties are unresolved https://github.com/Kotlin/dokka/issues/4555
+ */
 interface ParentInterfaceWithCompanionBlock{
     companion {
         const val interfaceCompanionProperty = ""
@@ -51,7 +53,7 @@ class ChildWithCompanionBlock : ParentWithCompanionBlock() {
 /**
  * @suppress
  */
-fun use() {
+private fun use() {
     ChildWithCompanionBlock.childValue
     ParentInterfaceWithCompanionBlock.interfaceCompanionProperty
 //    ChildWithCompanionBlock.parentCompnaionProperty
