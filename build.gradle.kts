@@ -160,7 +160,7 @@ dokka {
     }
 
     pluginsConfiguration.kotlinPlaygroundSamples {
-        this.kotlinPlaygroundScript.set("https://script.url")
+//        this.kotlinPlaygroundScript.set("https://script.url")
 //        this.kotlinPlaygroundServer.set("https://my-kotlin-playground-server")
     }
 }
