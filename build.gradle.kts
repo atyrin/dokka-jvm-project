@@ -111,6 +111,8 @@ dokka {
                 suppress.set(true)
             }
 
+            suppressAnnotatedWith.set(setOf("org.perpackage.suppress.DokkaHidden"))
+
             perPackageOption {
                 matchingRegex.set(""".*\.specialoption.*""")
                 documentedVisibilities.set(
