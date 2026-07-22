@@ -1,16 +1,19 @@
 # Module Dokka JVM Project
-Descr for `Dokka JVM Project` -- overriden module name
+Description for `Dokka JVM Project`. Located in the `resources/extra.md`
 
-See Also: [org.jetbrains.qa.kdoc.location]
+See Also: [org.jetbrains.qa.kdoc.location] (link to a package)
 
 # Module dokka-jvm-project
-Descr for `dokka-jvm-project`: SHOULDN'T BE VISIBLE
+Description for `dokka-jvm-project`: SHOULDN'T BE VISIBLE
 
 # Module 
 Descriptior for unnamed module: SHOULDN'T BE VISIBLE
 
 # Module modName
 Descr for module with name `modName`: SHOULDN'T BE VISIBLE
+
+# Package org.jetbrains.qa.dependencies
+Extra description for package `org.jetbrains.qa.dependencies`.
 
 # Package org.jetbrains.qa.kdoc.location
 

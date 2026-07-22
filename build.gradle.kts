@@ -91,7 +91,7 @@ dokka {
 //            sourceRoots.from(file("src"))
 //            classpath.from(project.files(), file("libs/dependency.jar"))
 
-            includes.from("extra.md")
+            includes.from(project.projectDir.resolve("resources/extra.md"))
 
             samples.from(
                 "src/main/kotlin/org/jetbrains/qa/kdoc/rendering/samples/samples.kt",
@@ -134,7 +134,7 @@ dokka {
                 create("Ktor") {
                     url.set(URI("https://api.ktor.io/"))
                     packageListUrl.set(
-                        rootProject.projectDir.resolve("ktor-package-list.txt").toURI()
+                        rootProject.projectDir.resolve("resources/ktor-package-list.txt").toURI()
                     )
                 }
             }
@@ -145,7 +145,7 @@ dokka {
         customAssets = files("css/homeIcon.svg")
         customStyleSheets.from("css/homeIcon.css")
         footerMessage = "Custom Footer Message (tm)"
-//        templatesDir = file("templates")
+//        templatesDir = file("resources/templates")
 //            separateInheritedMembers = true
         homepageLink = "https://github.com/Kotlin/dokka" // starting 1.9.20
     }
