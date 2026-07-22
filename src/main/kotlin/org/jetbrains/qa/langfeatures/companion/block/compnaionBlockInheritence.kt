@@ -1,4 +1,4 @@
-package org.jetbrains.qa.langfeatures.companion.block
+package org.jetbrains.qa.langfeatures.companion.block.inheritance
 
 /**
  * Companion block properties are unresolved https://github.com/Kotlin/dokka/issues/4555

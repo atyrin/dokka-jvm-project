@@ -1,4 +1,4 @@
-package org.jetbrains.qa.langfeatures.companion.extension
+package org.jetbrains.qa.langfeatures.companion.extension.inheritance
 
 interface ParentInterfaceCompanionExtContainer
 

@@ -2,6 +2,8 @@ package org.jetbrains.qa.langfeatures.companion.block
 
 /**
  * Class holder of companions
+ * https://github.com/Kotlin/KEEP/blob/main/proposals/KEEP-0449-companions-block-extension.md
+ *
  * [companionPropertyString] and [companionPropertyInt] [companionPropertyNoKdoc] are properties
  * [companionPropertyFunction] is a function
  */
@@ -26,7 +28,7 @@ class CompanionBlockHolder {
         val companionPropertyString: String = ""
 
         /**
-         * Base companion property
+         * Base companion property. Like [companionPropertyString] but Int.
          * @return [Int]
          */
         val companionPropertyInt: Int = 0
@@ -37,6 +39,44 @@ class CompanionBlockHolder {
          * @return companion property function string
          */
         fun companionPropertyFunction(): String = ""
+    }
+
+    /**
+     * soma edge cases
+     */
+    companion {
+        /**
+         * A constant declared in a companion block. This checks that the
+         * `const` modifier is retained in the rendered signature.
+         */
+        const val constantValue: Int = 42
+
+        /**
+         * A mutable companion block property. This checks that a companion
+         * block `var` is rendered as mutable.
+         *
+         * Reference to value: [companionPropertyString]
+         */
+        var mutableValue: String = "initial"
+
+        /**
+         * A companion block function with a generic collection signature.
+         * This exercises type parameters, collection types, and a function
+         * type in the Dokka signature and KDoc parameter table.
+         *
+         * @param values values to transform
+         * @return transformed values keyed by their original value
+         */
+        fun <T> genericFunction(values: List<T>, transform: (T) -> String): Map<T, String> =
+            values.associateWith(transform)
+
+        /**
+         * A fake constructor supplied by the companion block. `invoke` is the
+         * operator specifically permitted for companion blocks by the KEEP,
+         * so its operator signature should be rendered by Dokka.
+         */
+        operator fun invoke(value: String): CompanionBlockHolder =
+            CompanionBlockHolder()
     }
 
     /**
