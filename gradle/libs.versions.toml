@@ -1,7 +1,7 @@
 [versions]
 #dokka = "2.2.0"
-dokka = "2.3.0-dev-431"
-kotlin = "2.4.20-Beta1"
+dokka = "2.3.0-dev-432"
+kotlin = "2.4.20-Beta2"
 #kotlin = "2.5.0-dev-1581"
 ktor = "3.2.2"
 http4k = "5.13.2.0"
@@ -17,7 +17,7 @@ dokka-gfm = { module = "org.jetbrains.dokka:gfm-plugin", version.ref = "dokka" }
 dokka-test-api = { module = "org.jetbrains.dokka:dokka-test-api", version.ref = "dokka" }
 dokka-base-test-utils = { module = "org.jetbrains.dokka:dokka-base-test-utils", version.ref = "dokka" }
 
-dokka-mermaid = { module = "com.glureau:html-mermaid-dokka-plugin", version = "0.4.4" }
+dokka-mermaid = { module = "com.glureau:html-mermaid-dokka-plugin", version = "0.6.0" }
 
 wire-runtime = { module = "com.squareup.wire:wire-runtime", version = "4.9.3" }
 

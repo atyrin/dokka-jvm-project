@@ -42,7 +42,7 @@ dependencies {
     implementation(libs.bundles.external)
 
     dokkaHtmlPlugin(libs.dokka.versioning)
-//    dokkaHtmlPlugin(libs.dokka.mermaid)
+    dokkaHtmlPlugin(libs.dokka.mermaid)
 //    dokkaHtmlPlugin(libs.dokka.javadoc)
 //    dokkaHtmlPlugin(libs.dokka.kotlin.`as`.java)
 //    dokkaPlugin("org.jetbrains.dokka:gfm-plugin:2.1.0")
