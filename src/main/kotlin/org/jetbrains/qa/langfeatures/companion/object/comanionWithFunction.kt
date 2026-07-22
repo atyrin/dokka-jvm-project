@@ -1,4 +1,4 @@
-package org.jetbrains.qa.langfeatures.companion
+package org.jetbrains.qa.langfeatures.companion.`object`
 
 /**
  * Class [WithFunctionedCompanion] with companion [WithFunctionedCompanion.WithFunc].
