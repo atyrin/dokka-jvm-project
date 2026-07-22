@@ -13,7 +13,7 @@ group = "org.jetbrains.qa"
 version = "2.3.0"
 
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(21)
     compilerOptions {
         freeCompilerArgs.addAll(
             listOf(
