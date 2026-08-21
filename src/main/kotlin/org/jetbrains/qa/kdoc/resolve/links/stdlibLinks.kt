@@ -42,6 +42,14 @@ class KotlinLangStdLibLinks {
     }
 
     /**
+     * Nullable generic standard-library type should preserve both the type argument and the
+     * nullable marker while resolving the link to [List].
+     */
+    fun navigationToKotlinLangNullableList(): List<String>? {
+        TODO()
+    }
+
+    /**
      * [Char]
      */
     fun navigationToKotlinLangChar(): Char {
