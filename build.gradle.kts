@@ -42,6 +42,8 @@ dependencies {
     implementation(libs.bundles.external)
 
     dokkaHtmlPlugin(libs.dokka.versioning)
+
+    // mermaid plugin leads to the bug with copy button location for code snippets
     dokkaHtmlPlugin(libs.dokka.mermaid)
 //    dokkaHtmlPlugin(libs.dokka.javadoc)
 //    dokkaHtmlPlugin(libs.dokka.kotlin.`as`.java)
