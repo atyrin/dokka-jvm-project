@@ -1,7 +1,7 @@
 [versions]
 #dokka = "2.2.0"
-dokka = "2.3.0-test-5f71425d47de6007cdbaccc11dfa9d0654b58c7b"
-kotlin = "2.4.20-RC2"
+dokka = "2.3.0-Beta"
+kotlin = "2.4.20"
 #kotlin = "2.5.0-dev-1581"
 ktor = "3.2.2"
 http4k = "5.13.2.0"
